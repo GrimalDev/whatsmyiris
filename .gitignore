@@ -1,3 +1,6 @@
+# calendar big file
+./src/calendar/*
+
 # Logs
 logs
 *.log

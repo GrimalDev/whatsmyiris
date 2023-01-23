@@ -1,5 +1,5 @@
 # calendar big file
-./src/calendar/*
+/src/calendar/*
 
 # Logs
 logs

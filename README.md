@@ -15,4 +15,4 @@ Access the website via: **[whatsmyiris.fr](whatsmyiris.fr)**
  ---
  
 ###   LICENSING
-#### **Under *[Apache 2.0](https://github.com/apache/.github/blob/133878aef4c2f084f1a44ac5bdf5338a3681a525/LICENSE)* license**
+#### **Under *[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)* license**

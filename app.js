@@ -31,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/calendar', calendarRouter);
+//TODO: Oauth microsoft mediaschool
 
 // catch 404 and forward to error handlerchest-model-v2.usdz
 app.use(function(req, res, next) {

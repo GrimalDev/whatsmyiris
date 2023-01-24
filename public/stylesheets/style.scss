@@ -1,8 +1,40 @@
+/*---------IMPORTS---------*/
+
+@import "colors";
+
+/*---------GENERALS---------*/
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+    padding: 2rem;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: $bg-body;
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-a {
-    color: #00B7FF
+main {
+    display: flex;
+    width: clamp(300px, 50%, 900px);
+}
+
+.block-container {
+    background-color: $bg-containers;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*---------SIDE CONTROL---------*/
+
+/*---------DATE CONTAINER---------*/
+
+/*---------RESPONSIVE---------*/
+
+@media screen and (max-width: 650px) {
+    //TODO: Side container should be hidden on mobile
+    main {
+        flex-direction: column;
+    }
 }

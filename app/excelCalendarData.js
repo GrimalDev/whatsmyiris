@@ -1,7 +1,7 @@
 import {AuthConfig as AuthConfig} from "node-sp-auth-config";
 import {Download as spDownload} from "sp-download";
 
-async function pullExcelData() {
+export default async function pullExcelData() {
 
     const fileUrl = 'https://iecm064-my.sharepoint.com/personal/boris_mallick_mediaschool_education/Documents/Partages/Planning%20annuel%20BTS%20SIO%202022-2023.xlsx';
     const filePath = './src/calendar/calendar-main.xlsx'
@@ -18,12 +18,11 @@ async function pullExcelData() {
 
             calendarDL.downloadFile(fileUrl, filePath)
                 .then((savedToPath) => {
-                    console.log(`Downloaded to ${savedToPath}`);
+                    return savedToPath;
                 })
                 .catch((error) => {
-                    console.log(error);
+                    return error;
                 });
         })
         .catch(console.warn);
 }
-await pullExcelData();

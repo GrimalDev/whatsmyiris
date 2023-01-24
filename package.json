@@ -12,8 +12,9 @@
     "http-errors": "^2.0.0",
     "morgan": "~1.9.1",
     "node-sass-middleware": "^1.0.1",
-    "node-sp-auth": "^3.0.7",
-    "sp-download": "^2.0.0"
+    "node-sp-auth": "^1.2.0",
+    "node-sp-auth-config": "^3.0.5",
+    "sp-download": "^1.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

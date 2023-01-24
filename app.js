@@ -7,6 +7,7 @@ import {fileURLToPath} from "url";
 
 //route imports
 import indexRouter from './routes/index.js';
+import calendarRouter from './routes/calendar.js';
 
 const app = express();
 const listeningPort = 5232
@@ -29,6 +30,7 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/calendar', calendarRouter);
 
 // catch 404 and forward to error handlerchest-model-v2.usdz
 app.use(function(req, res, next) {

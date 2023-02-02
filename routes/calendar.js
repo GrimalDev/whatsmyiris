@@ -4,7 +4,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    pullExcelData()
+    pullExcelData("../src/calendar/calendar-main.xlsx")
         .then(out => res.json({
             message: 'Excel calendar data pulled successfully',
             data: out

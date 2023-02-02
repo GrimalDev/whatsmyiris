@@ -8,12 +8,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="@types/bcrypt" level="application" />
-    <orderEntry type="library" name="@types/passport" level="application" />
-    <orderEntry type="library" name="particles.js" level="application" />
-    <orderEntry type="library" name="@types/express" level="application" />
-    <orderEntry type="library" name="@types/morgan" level="application" />
-    <orderEntry type="library" name="@types/node-sass-middleware" level="application" />
-    <orderEntry type="library" name="@types/http-errors" level="application" />
   </component>
 </module>

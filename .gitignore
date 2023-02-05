@@ -1,6 +1,12 @@
 # calendar big file
 /src/calendar/*
 
+# JetBrain
+.idea
+
+# rest requests tests
+.rest
+
 # Logs
 logs
 *.log

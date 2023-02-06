@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <title>What's my IRIS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <% //meta SEO %>
+    <meta name="description" content="Emplois du temps de l'école Iris Strasbourg" />
+    <meta name="keywords" content="calendar, calendrier, school, ecole, iris, mediaschool" />
+    <meta name="author" content="Grimaldi Baptiste, Grimaldev" />
+
+    <% //favicon %>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <% //Stylesheets %>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <% //full calendar imports %>
+    <script type="importmap">
+      {
+        "imports": {
+          "@fullcalendar/core": "https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.1/index.global.min.js",
+          "@fullcalendar/daygrid": "/fullcalendar/daygrid.global.min.js",
+          "@fullcalendar/timegrid": "/fullcalendar/timegrid.global.min.js",
+          "@fullcalendar/list": "/fullcalendar/list.global.min.js"
+        }
+      }
+    </script>
+    <script defer src="/javascripts/calendar.js" type="module"></script>
+
+    <% //animations %>
+    <script src="/javascripts/animations.js" type="module"></script>
+
   </head>
   <body>
+    <div id="loading-screen">
+        <div id="loading-screen__content">
+          <img id="loading-screen__backimage" src="/assets/images/loading-calendar.png" alt="Loading calendar">
+          <img id="loading-screen__frontimage" src="/assets/images/loading-banner.png" alt="Loading banner">
+        </div>
+    </div>
+<!--    <header class="block-container">-->
+<!--      <h1><%= date %></h1>-->
+<!--      <p>Welcome to What's my IRIS</p>-->
+<!--    </header>-->
     <main>
-      <div class="block-container">
-        <h1><%= date %></h1>
-        <p>Welcome to What's my IRIS</p>
-      </div>
+      <div id="calendar"></div>
     </main>
   </body>
 </html>

@@ -1,26 +1,81 @@
 /*---------IMPORTS---------*/
 /*---------GENERALS---------*/
+html {
+  height: 100%;
+  width: 100%; }
+
 body {
   padding: 2rem;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #F5F6FA;
+  background-color: #FFF8B1;
   color: #17242A;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  height: 100%;
+  width: 100%; }
 
 main {
   display: flex;
-  width: clamp(300px, 50%, 900px); }
-
-.block-container {
-  background-color: #FFFFFF;
+  width: clamp(300px, 95%, 1200px);
+  height: 100%;
+  background-color: #F5F6FA;
   border-radius: 1rem;
   padding: 1rem;
   margin-bottom: 1rem; }
 
+#calendar {
+  width: 100%;
+  height: 100%; }
+
+/*---------LOADING SCREEN---------*/
+#loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #FFF8B1;
+  transition: ease-in-out; }
+
+#loading-screen__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 70%;
+  animation: fade-in-pop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+#loading-screen__frontimage {
+  position: absolute;
+  animation: fade-in-pop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+#loading-screen__backimage {
+  animation: fade-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
 /*---------SIDE CONTROL---------*/
 /*---------DATE CONTAINER---------*/
+/*---------ANIMATIONS---------*/
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
 /*---------RESPONSIVE---------*/
 @media screen and (max-width: 650px) {
   main {

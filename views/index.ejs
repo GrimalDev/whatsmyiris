@@ -23,14 +23,19 @@
     <script type="importmap">
       {
         "imports": {
-          "@fullcalendar/core": "https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.1/index.global.min.js",
-          "@fullcalendar/daygrid": "/fullcalendar/daygrid.global.min.js",
-          "@fullcalendar/timegrid": "/fullcalendar/timegrid.global.min.js",
-          "@fullcalendar/list": "/fullcalendar/list.global.min.js"
+          "@fullcalendar/core": "https://cdn.skypack.dev/pin/@fullcalendar/core@v6.1.1-6ZgB0Pv3Yek381qRourC/mode=imports,min/optimized/@fullcalendar/core.js",
+          "@fullcalendar/daygrid": "https://cdn.skypack.dev/pin/@fullcalendar/daygrid@v6.1.1-RqZScTREejF8cFbXlCcz/mode=imports,min/optimized/@fullcalendar/daygrid.js",
+          "@fullcalendar/timegrid": "https://cdn.skypack.dev/pin/@fullcalendar/timegrid@v6.1.1-pbMnmEw6JSmwZA0klM5v/mode=imports,min/optimized/@fullcalendar/timegrid.js",
+          "@fullcalendar/list": "https://cdn.skypack.dev/pin/@fullcalendar/list@v6.1.1-2xlPEt14J0cGOl3MIgBP/mode=imports,min/optimized/@fullcalendar/list.js"
         }
       }
     </script>
-    <script defer src="/javascripts/calendar.js" type="module"></script>
+
+    <% //full calendar lang %>
+    <script src="/fullcalendar/core/locales/fr.js" type="module"></script>
+
+    <% //full calendar config %>
+    <script defer src="/javascripts/calendar-render.js" type="module"></script>
 
     <% //animations %>
     <script src="/javascripts/animations.js" type="module"></script>
@@ -48,6 +53,32 @@
 <!--      <p>Welcome to What's my IRIS</p>-->
 <!--    </header>-->
     <main>
+      <!--Popup-->
+      <div id="event-popup">
+          <div id="event-popup__content">
+            <div id="event-popup__header">
+                <h2 id="event-popup__title"></h2>
+            </div>
+            <div id="event-popup__body">
+                <div id="event-popup__description"></div>
+                <div id="event-popup__location"></div>
+                <div id="event-popup__time"></div>
+            </div>
+          </div>
+      </div>
+      <div class="selectors">
+        <!--Select teams-->
+        <% for (let i = 0; i < teams.length; i++) { // teams is a local variable %>
+        <div class="team-select">
+          <label class="team-select__content" for="team-<%= teams[i] %>">
+            <input class="team-select" type="checkbox" id="team-<%= teams[i] %>" name="team-<%= teams[i] %>" value="<%= teams[i] %>" checked>
+            <%= teams[i] %>
+          </label>
+        </div>
+
+        <% } %>
+      </div>
+      <!--Calendar-->
       <div id="calendar"></div>
     </main>
   </body>

@@ -1,22 +1,22 @@
 import Excel from 'exceljs';
-import dd from "dump-die";
 
 //Extract day informations out of the excel file
 //There is an Excel that defines a calendar. It is organized in blocks. One block represents a day and 5 blocks in a line separated with a column is a working week, ignoring the weekends. Form example:
 // first week: height is from line 5 to 20 and the days are the following: C to E, G to I, K to M, O to Q; S to U. The next week is then 2 lines under the first and has the same pattern.
 // Days: the 4 first lines of a block (day) is the head, ignore that. The first column of a block is the team 1, the second is team 2 and the third the team 3. In each column, from the fifth line to the last of the block, describes the class the team has were each line is an hour from 9h to 19h.
 
-export default async function extractDayInfos(filepath) {
-    const filePath = filepath;
+//TODO: make the code more generic, so it can be used if more teams are added and the teams columns change.
+export const teams = ['BTS1', 'BTS2-SISR', 'BTS2-SLAM'];
+const teamColumns = ['C', 'D', 'E', 'G', 'H', 'I', 'K', 'L', 'M', 'O', 'P', 'Q', 'S', 'T', 'U'];
+const dateRow = 2; // row where the date is
+const hourRow = 4; // start of the hours
+
+export default async function extractDayInfos(filePath) {
     const workbook = await new Excel.Workbook();
     await workbook.xlsx.readFile(filePath);
     const worksheet = await workbook.getWorksheet(workbook.worksheets[0].name);
 
     const events = [];
-    const teamColumns = ['C', 'D', 'E', 'G', 'H', 'I', 'K', 'L', 'M', 'O', 'P', 'Q', 'S', 'T', 'U'];
-    const teams = ['BTS1', 'BTS2 SISR', 'BTS2 SLAM'];
-    const dateRow = 2; // row where the date is
-    const hourRow = 4; // start of the hours
     const weeksStart = []; // array of the row numbers where the weeks start
 
     // set the weeksStarts array
@@ -38,6 +38,9 @@ export default async function extractDayInfos(filepath) {
             weeksStart.push(i-2);
         }
     }
+
+    //TODO: Add all day events writtent i the middle of the day
+    //TODO: Add place in the event
 
     // iterate through the weeks
     for (let week = 0; week < weeksStart.length; week++) {
@@ -75,11 +78,21 @@ export default async function extractDayInfos(filepath) {
                     const eventEnd = new Date(startDate.setUTCHours(dayHour + 1))
 
                     // Store cell in temporary event to see if the next is the same
+
+                    //prepare the id of the event
+                    //The id of an event is the title with parenthesis removed and all spaces replaced by dashes, the team  and the start date in timestamp format all in lowercase, with no spaces and seperated by an underscore
+                    //All special characters are replaced with equivalents in french in the title
+                    let idEvent = currentCell.value.noSpecialsFR().replace(/[\(\)]/g, '')
+                    idEvent = idEvent.replace(/ /g, '-')
+                    idEvent = idEvent.toLowerCase() + '_' + teams[team] + '_' + eventStart.getTime();
+
                     const newTmpEvent = {
+                        id: idEvent,
                         title: currentCell.value,
                         start: eventStart,
                         end: eventEnd,
                         team: teams[team],
+                        classNames: [ `team-${teams[team]}` ]
                     }
 
                     // If it is the same, add 1 hour to the end of the tmp event
@@ -88,7 +101,6 @@ export default async function extractDayInfos(filepath) {
 
                     if (tmpEvent.title === '') {//case of a new event
                         tmpEvent = newTmpEvent;
-                        tmpEvent.title = currentCell.value;
                     } else if (tmpEvent.title === currentCell.value && currentCell.value !== '' && currentCell.value !== ' ') {//case of the same event
                         //set the end date to the next hour
                         tmpEvent.end.setHours(tmpEvent.end.getHours() + 1);
@@ -98,7 +110,6 @@ export default async function extractDayInfos(filepath) {
 
                         //set the new temp event
                         tmpEvent = newTmpEvent;
-                        tmpEvent.title = currentCell.value;
                     }
                 }
             }
@@ -130,4 +141,24 @@ function parseFrenchDate(dateString) {
 function isDate(text) {
     const dateRegex = /^(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\s\d{1,2}\s(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s\d{4}$/i;
     return dateRegex.test(text);
+}
+
+String.prototype.noSpecialsFR = function() {
+    const accent = [
+        /[\300-\306]/g, /[\340-\346]/g, // A, a
+        /[\310-\313]/g, /[\350-\353]/g, // E, e
+        /[\314-\317]/g, /[\354-\357]/g, // I, i
+        /[\322-\330]/g, /[\362-\370]/g, // O, o
+        /[\331-\334]/g, /[\371-\374]/g, // U, u
+        /[\321]/g, /[\361]/g, // N, n
+        /[\307]/g, /[\347]/g, // C, c
+    ];
+    const noaccent = ['A','a','E','e','I','i','O','o','U','u','N','n','C','c'];
+
+    let str = this;
+    for(let i = 0; i < accent.length; i++){
+        str = str.replace(accent[i], noaccent[i]);
+    }
+
+    return str;
 }

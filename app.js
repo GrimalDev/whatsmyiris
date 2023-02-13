@@ -6,7 +6,7 @@ import createError from 'http-errors';
 import {fileURLToPath} from "url";
 
 //route imports
-import indexRouter from './routes/index.js';
+import homeRouter from './routes/home.js';
 import calendarRouter from './routes/calendar.js';
 
 const app = express();
@@ -29,8 +29,11 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', homeRouter);
 app.use('/calendar', calendarRouter);
+//return fullCalendar libraries
+app.use('/fullcalendar', express.static(path.join(__dirname, 'node_modules/@fullcalendar/')));
+
 //TODO: Oauth microsoft mediaschool
 
 // catch 404 and forward to error handlerchest-model-v2.usdz

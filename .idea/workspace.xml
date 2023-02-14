@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="Calendar package&#10;&#10;Package with list, day and time grid">
-      <change afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/daygrid.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/fr.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/list.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/timegrid.global.min.js" afterDir="false" />
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="home route is the old index route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +132,10 @@
       <workItem from="1675971663915" duration="2069000" />
       <workItem from="1676066091766" duration="13465000" />
       <workItem from="1676142858155" duration="598000" />
-      <workItem from="1676219087150" duration="1491000" />
+      <workItem from="1676219087150" duration="6262000" />
+      <workItem from="1676297314848" duration="604000" />
+      <workItem from="1676384471471" duration="342000" />
+      <workItem from="1676384830272" duration="925000" />
     </task>
     <task id="LOCAL-00001" summary="env for sharepoint auth&#10;&#10;all auth begining with SPAUTH in the .env file are now for sharepoint auth">
       <created>1675322054390</created>
@@ -241,7 +235,42 @@
       <option name="project" value="LOCAL" />
       <updated>1676272570249</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Calendar package&#10;&#10;Package with list, day and time grid">
+      <created>1676272626675</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676272626675</updated>
+    </task>
+    <task id="LOCAL-00016" summary="default index render">
+      <created>1676272720657</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676272720657</updated>
+    </task>
+    <task id="LOCAL-00017" summary="cdn package on import map">
+      <created>1676272744259</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676272744259</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Colormap update">
+      <created>1676272752079</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1676272752079</updated>
+    </task>
+    <task id="LOCAL-00019" summary="home route is the old index route">
+      <created>1676272772030</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1676272772030</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +303,10 @@
     <MESSAGE value="render calendar options" />
     <MESSAGE value="Add event id&#10;&#10;Select Event with unique id" />
     <MESSAGE value="Calendar package&#10;&#10;Package with list, day and time grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calendar package&#10;&#10;Package with list, day and time grid" />
+    <MESSAGE value="default index render" />
+    <MESSAGE value="cdn package on import map" />
+    <MESSAGE value="Colormap update" />
+    <MESSAGE value="home route is the old index route" />
+    <option name="LAST_COMMIT_MESSAGE" value="home route is the old index route" />
   </component>
 </project>

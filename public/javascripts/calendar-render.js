@@ -4,34 +4,37 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listGridPlugin from '@fullcalendar/list'
 
+
 async function filterCalendarAuto(calendar) {
     //get all select team-select
     const teamSelects = document.querySelectorAll(".team-select");
 //ad event listener to each select
     for (let select of teamSelects) {
         select.addEventListener("change", async (select) => {
-            await scanAll(select);
+            //get html collection of select
+            //if select is input
+            if (select.currentTarget.tagName === "INPUT") { await scanAll(select.target); }
         })
     }
-    //re render the calendar
+    //re render calendar
     calendar.render();
 }
 
 async function filterCalendar() {
-    console.log("filtering calendar");
     //get all select team-select
-    const teamSelects = document.querySelectorAll(".team-select");
+    const teamSelects = document.querySelectorAll("input.team-select");
     for (let select of teamSelects) {
         await scanAll(select);
     }
 }
 
 async function scanAll(select) {
-    //make event correspondign to the select visible if ticked else invisible
-    const team = select.target.value;
+    //make event corresponding to the select visible if ticked else invisible;
+    const team = select.value;
+
     const events = document.querySelectorAll(`.team-${team}`);
     events.forEach((event) => {
-        if (select.target.checked) {
+        if (select.checked) {
             event.style.display = "block";
         } else {
             event.style.display = "none";
@@ -107,9 +110,10 @@ const calendarOptions = {
     },
     slotMinTime: "06:00:00",
     slotMaxTime: "20:00:00",
+    slotEventOverlap: false,
     //Ad an click on event to get the team name with a popup
     eventClick: (info) => eventInfoDisplay(info),
-    eventRender: () => filterCalendar()
+    // eventRender: () => filterCalendar()
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -125,6 +129,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     setInterval(() => {
         calendar.refetchEvents();
     }, 300000);
+
+    //listen for any changes in the calendar div and all its childs and under childs
+    const observer = new MutationObserver(() => {
+        filterCalendar();
+    });
+    observer.observe(calendarEl, {
+        childList: true,
+        subtree: true
+    });
 });
-
-

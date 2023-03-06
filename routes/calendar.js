@@ -2,13 +2,20 @@ import express from "express";
 import pullExcelData from "../app/excelCalendarData.js";
 import extractDayInfos, { teams } from "../app/calendarHandle.js";
 import dd from "dump-die";
+import {fileURLToPath} from "url";
+import path from "path";
 const router = express.Router();
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
     //TODO: respond json between dates (start, end) in the get request
 
-    const excelCalendarPath = "/Users/thehiddengeek/WebstormProjects/whatsmyiris/src/calendar/calendar-main.xlsx";
+    //get the root folder
+    //Get the absolute path of th src folder
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+    //get the path to the excel file
+    const excelCalendarPath = path.join(__dirname, '../src/calendar/calendar-main.xlsx');
 
     //if calendar get request ask for the teams, return the teams
     if (req.query.teams === "") {
@@ -22,22 +29,24 @@ router.get('/', async function (req, res, next) {
     // await excel handling with error handling
     try {
         await pullExcelData(excelCalendarPath);
-        res.json(await extractDayInfos(excelCalendarPath));
+        const calendarJSON = await extractDayInfos(excelCalendarPath);
+
+        //return the calendar as json between the dates in the get request
+        if (req.query.start && req.query.end) {
+            const start = new Date(req.query.start);
+            const end = new Date(req.query.end);
+            const filteredCalendar = calendarJSON.filter(event => {
+                const eventDate = new Date(event.start);
+                return eventDate >= start && eventDate <= end;
+            });
+            res.json(filteredCalendar);
+        } else {
+            res.json(calendarJSON);
+        }
     } catch (error) {
         console.log(error);
         res.json({error: 'Could not get calendar data.'});
     }
 });
-
-//get current date
-async function getDate() {
-    const today = new Date();
-    const options = {
-        weekday: "long",
-        day: "numeric",
-        month: "long"
-    };
-    return today.toLocaleDateString("fr-FR", options);
-}
 
 export default router;

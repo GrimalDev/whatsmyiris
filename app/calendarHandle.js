@@ -5,7 +5,8 @@ import Excel from 'exceljs';
 // first week: height is from line 5 to 20 and the days are the following: C to E, G to I, K to M, O to Q; S to U. The next week is then 2 lines under the first and has the same pattern.
 // Days: the 4 first lines of a block (day) is the head, ignore that. The first column of a block is the team 1, the second is team 2 and the third the team 3. In each column, from the fifth line to the last of the block, describes the class the team has were each line is an hour from 9h to 19h.
 
-//TODO: make the code more generic, so it can be used if more teams are added and the teams columns change.
+//TODO: Make the code more generic, so it can be used if more teams are added and the teams columns change.
+//TODO: Add notes via the upper cells of a day
 export const teams = ['BTS1', 'BTS2-SISR', 'BTS2-SLAM'];
 const teamColumns = ['C', 'D', 'E', 'G', 'H', 'I', 'K', 'L', 'M', 'O', 'P', 'Q', 'S', 'T', 'U'];
 const dateRow = 2; // row where the date is
@@ -22,7 +23,6 @@ export default async function extractDayInfos(filePath) {
     // set the weeksStarts array
     // A new week is if the first cell (top left) of the first day of the week is a cell
     // Where the top cell has only a bottom border and the left cell has only a right border
-    //TODO: detect a week f it has a date
     for (let i = 0; i < worksheet.rowCount; i++) {
         let currentCell = worksheet.getRow(i).getCell(teamColumns[0]);
 
@@ -39,7 +39,7 @@ export default async function extractDayInfos(filePath) {
         }
     }
 
-    //TODO: Add all day events writtent i the middle of the day
+    //TODO: Add all day events when text writtent in the middle of the day
     //TODO: Add place in the event
 
     // iterate through the weeks
@@ -93,6 +93,15 @@ export default async function extractDayInfos(filePath) {
                         end: eventEnd,
                         team: teams[team],
                         classNames: [ `team-${teams[team]}` ]
+                    }
+
+                    //detect holidays if title contains 'vacances' and create allday event
+                    if (currentCell.value.toLowerCase().includes('vacanves')) {
+                        newTmpEvent.allDay = true;
+                        newTmpEvent.classNames.push('holiday');
+                        //save the event
+                        events.push(newTmpEvent);
+                        continue;
                     }
 
                     // If it is the same, add 1 hour to the end of the tmp event

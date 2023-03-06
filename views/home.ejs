@@ -111,16 +111,15 @@
             </div>
           </div>
       </div>
-      <div class="selectors">
+      <div id="selectors" class="team-select__container">
         <!--Select teams-->
         <% for (let i = 0; i < teams.length; i++) { // teams is a local variable %>
         <div class="team-select">
           <label class="team-select__content" for="team-<%= teams[i] %>">
-            <input class="team-select" type="checkbox" id="team-<%= teams[i] %>" name="team-<%= teams[i] %>" value="<%= teams[i] %>" checked>
+            <input class="team-select" type="checkbox" id="team-<%= teams[i] %>" name="team-<%= teams[i] %>" value="<%= teams[i] %>">
             <%= teams[i] %>
           </label>
         </div>
-
         <% } %>
       </div>
       <!--Calendar-->

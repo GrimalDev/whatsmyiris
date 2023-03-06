@@ -1,14 +1,15 @@
 import express from "express";
-import pullExcelData from "../app/excelCalendarData.js";
-import extractDayInfos, {teams} from "../app/calendarHandle.js";
+import {teams} from "../app/calendarHandle.js";
 const router = express.Router();
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  res.render('index', {
-      date: getDate(),
+    //TODO: add SSO  microsoft authentication;
+    //SSO microsoft authentication
+    res.render('home', {
+      date: await getDate(),
       teams: teams
-  });
+    });
 });
 
 //get current date

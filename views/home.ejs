@@ -48,10 +48,55 @@
           <img id="loading-screen__frontimage" src="/assets/images/loading-banner.png" alt="Loading banner">
         </div>
     </div>
-<!--    <header class="block-container">-->
-<!--      <h1><%= date %></h1>-->
-<!--      <p>Welcome to What's my IRIS</p>-->
-<!--    </header>-->
+    <div id="choose-team">
+      <div>
+        <h1>Welcome to What's my IRIS</h1>
+        <h2><%= date %></h2>
+        <h3>Choisissez votre équipe</h3>
+      </div>
+      <div id="choose-team__teams" class="team-select__container">
+        <div class="team-select">
+            <label class="team-select__content" for="team-BTS1-first">
+              <input class="team-select" type="checkbox" id="team-BTS1-first" name="BTS1" value="BTS1">
+              BTS1
+            </label>
+        </div>
+        <div class="team-select">
+            <label class="team-select__content" for="team-BTS2-SISR-first">
+              <input class="team-select" type="checkbox" id="team-BTS2-SISR-first" name="BTS2-SISR" value="BTS2-SISR">
+              BTS2-SISR
+            </label>
+        </div>
+        <div class="team-select">
+            <label class="team-select__content" for="team-BTS2-SLAM-first">
+              <input class="team-select" type="checkbox" id="team-BTS2-SLAM-first" name="BTS2-SLAM" value="BTS2-SLAM">
+              BTS2-SLAM
+            </label>
+        </div>
+      </div>
+      <div id="choose-team__action">
+        <button id="foot" onclick="start()"><button class="button-os" onclick="start()"><a href="#">SUIVANT</a></button></button>
+        <script>
+          function start() {
+            //check the corresponding team selects according to the previous selected ones
+            const teamsFirst = document.querySelectorAll("#choose-team__teams .team-select .team-select__content input");
+            const teamsInterface = document.querySelectorAll("#selectors .team-select .team-select__content input");
+            const teamsCheckedFirst = [];
+            for (let i = 0; i < teamsFirst.length; i++) {
+              if (teamsFirst[i].checked) {
+                teamsCheckedFirst.push(teamsFirst[i].value);
+              }
+            }
+            for (let i = 0; i < teamsInterface.length; i++) {
+              if (teamsCheckedFirst.includes(teamsInterface[i].value)) {
+                teamsInterface[i].checked = true;
+              }
+            }
+            document.getElementById("choose-team").style.display = "none";
+          }
+        </script>
+      </div>
+    </div>
     <main>
       <!--Popup-->
       <div id="event-popup">

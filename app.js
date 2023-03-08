@@ -10,7 +10,7 @@ import homeRouter from './routes/home.js';
 import calendarRouter from './routes/calendar.js';
 
 const app = express();
-const listeningPort = 5232
+const listeningPort = 80
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -21,12 +21,15 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(sassMiddleware({
-  src: path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
-  indentedSyntax: false, // true = .sass and false = .scss
-  sourceMap: true
-}));
+//if state if in developpemnt use sass middleware
+if (app.get('env') === 'development') {
+  app.use(sassMiddleware({
+    src: path.join(__dirname, 'public'),
+    dest: path.join(__dirname, 'public'),
+    indentedSyntax: false, // true = .sass and false = .scss
+    sourceMap: true
+  }));
+}
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRouter);

@@ -1,4 +1,4 @@
 .idea
 node_modules
-dockerfile
 package-lock.json
+.git

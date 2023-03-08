@@ -1,7 +1,6 @@
 import express from "express";
 import pullExcelData from "../app/excelCalendarData.js";
 import extractDayInfos, { teams } from "../app/calendarHandle.js";
-import dd from "dump-die";
 import {fileURLToPath} from "url";
 import path from "path";
 const router = express.Router();

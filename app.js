@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import logger from 'morgan';
-import sassMiddleware from 'node-sass-middleware';
+// import sassMiddleware from 'node-sass-middleware';
 import createError from 'http-errors';
 import {fileURLToPath} from "url";
 
@@ -22,14 +22,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //if state if in developpemnt use sass middleware
-if (app.get('env') === 'development') {
-  app.use(sassMiddleware({
-    src: path.join(__dirname, 'public'),
-    dest: path.join(__dirname, 'public'),
-    indentedSyntax: false, // true = .sass and false = .scss
-    sourceMap: true
-  }));
-}
+// if (app.get('env') === 'development') {
+//   app.use(sassMiddleware({
+//     src: path.join(__dirname, 'public'),
+//     dest: path.join(__dirname, 'public'),
+//     indentedSyntax: false, // true = .sass and false = .scss
+//     sourceMap: true
+//   }));
+// }
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRouter);

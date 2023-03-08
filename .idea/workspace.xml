@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="index renamed to home">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/whatsmyiris.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/whatsmyiris.iml" afterDir="false" />
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="production correction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/calendar-render.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/calendar-render.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +149,11 @@
       <workItem from="1678099162386" duration="1121000" />
       <workItem from="1678111504771" duration="710000" />
       <workItem from="1678112968687" duration="3138000" />
+      <workItem from="1678132380102" duration="483000" />
+      <workItem from="1678140754969" duration="80000" />
+      <workItem from="1678179352472" duration="7314000" />
+      <workItem from="1678281159762" duration="132000" />
+      <workItem from="1678294874756" duration="1196000" />
     </task>
     <task id="LOCAL-00001" summary="env for sharepoint auth&#10;&#10;all auth begining with SPAUTH in the .env file are now for sharepoint auth">
       <created>1675322054390</created>
@@ -302,7 +295,91 @@
       <option name="project" value="LOCAL" />
       <updated>1676389099068</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Docker deployement files">
+      <created>1678132419930</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132419930</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add date selector on calendar requests">
+      <created>1678132466808</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132466808</updated>
+    </task>
+    <task id="LOCAL-00023" summary="button team selection and redner bug fixes">
+      <created>1678132505076</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132505076</updated>
+    </task>
+    <task id="LOCAL-00024" summary="holiday detection&#10;&#10;(still needs fixes)">
+      <created>1678132538225</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132538225</updated>
+    </task>
+    <task id="LOCAL-00025" summary="minor design changes&#10;&#10;- colors&#10;- sizes">
+      <created>1678132622974</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132622974</updated>
+    </task>
+    <task id="LOCAL-00026" summary="selection page&#10;&#10;There is now a first landing page to pre-select the team you want to display.&#10;The goal is to avoid getting overflowed by colors at first sight.">
+      <created>1678132755465</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132755465</updated>
+    </task>
+    <task id="LOCAL-00027" summary="button for the first team selection page">
+      <created>1678132782815</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132782815</updated>
+    </task>
+    <task id="LOCAL-00028" summary="The html for the selection page">
+      <created>1678132809439</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132809439</updated>
+    </task>
+    <task id="LOCAL-00029" summary="authentication?">
+      <created>1678132826766</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132826766</updated>
+    </task>
+    <task id="LOCAL-00030" summary="ide files">
+      <created>1678132834038</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1678132834038</updated>
+    </task>
+    <task id="LOCAL-00031" summary="production correction">
+      <created>1678294892353</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1678294892353</updated>
+    </task>
+    <task id="LOCAL-00032" summary="production correction">
+      <created>1678294939944</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1678294939944</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,11 +398,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="env for sharepoint auth&#10;&#10;all auth begining with SPAUTH in the .env file are now for sharepoint auth" />
-    <MESSAGE value="IDE files" />
-    <MESSAGE value="headless auth config&#10;&#10;no prompt interaction on sharepoint auth" />
-    <MESSAGE value="converts excel to events" />
-    <MESSAGE value=".idea ignore" />
     <MESSAGE value="restfull test file" />
     <MESSAGE value="logo" />
     <MESSAGE value="loading screen" />
@@ -340,6 +412,17 @@
     <MESSAGE value="Colormap update" />
     <MESSAGE value="home route is the old index route" />
     <MESSAGE value="index renamed to home" />
-    <option name="LAST_COMMIT_MESSAGE" value="index renamed to home" />
+    <MESSAGE value="Docker deployement files" />
+    <MESSAGE value="Add date selector on calendar requests" />
+    <MESSAGE value="button team selection and redner bug fixes" />
+    <MESSAGE value="holiday detection&#10;&#10;(still needs fixes)" />
+    <MESSAGE value="minor design changes&#10;&#10;- colors&#10;- sizes" />
+    <MESSAGE value="selection page&#10;&#10;There is now a first landing page to pre-select the team you want to display.&#10;The goal is to avoid getting overflowed by colors at first sight." />
+    <MESSAGE value="button for the first team selection page" />
+    <MESSAGE value="The html for the selection page" />
+    <MESSAGE value="authentication?" />
+    <MESSAGE value="ide files" />
+    <MESSAGE value="production correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="production correction" />
   </component>
 </project>

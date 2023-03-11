@@ -1,7 +1,7 @@
 ### Calendar API
 
-GET localhost:5232/calendar
+GET localhost/calendar
 
 ### Index main route
 
-GET localhost:5232/
+GET localhost/

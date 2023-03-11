@@ -14,7 +14,8 @@ router.get('/', async function (req, res, next) {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
     //get the path to the excel file
-    const excelCalendarPath = path.join(__dirname, '../src/calendar/calendar-main.xlsx');
+    const excelCalendarPath = path.join(__dirname, '../src/calendar/main-calendar.xlsx');
+    const configPath = path.join(__dirname, '../app/config/private.json');
 
     //if calendar get request ask for the teams, return the teams
     if (req.query.teams === "") {
@@ -27,21 +28,23 @@ router.get('/', async function (req, res, next) {
 
     // await excel handling with error handling
     try {
-        await pullExcelData(excelCalendarPath);
-        const calendarJSON = await extractDayInfos(excelCalendarPath);
-
-        //return the calendar as json between the dates in the get request
-        if (req.query.start && req.query.end) {
-            const start = new Date(req.query.start);
-            const end = new Date(req.query.end);
-            const filteredCalendar = calendarJSON.filter(event => {
-                const eventDate = new Date(event.start);
-                return eventDate >= start && eventDate <= end;
-            });
-            res.json(filteredCalendar);
-        } else {
-            res.json(calendarJSON);
-        }
+        await pullExcelData(excelCalendarPath, configPath);
+        //time out to wait for the file to be downloaded
+        setTimeout(async () => {
+            const calendarJSON = await extractDayInfos(excelCalendarPath);
+            //return the calendar as json between the dates in the get request
+            if (req.query.start && req.query.end) {
+                const start = new Date(req.query.start);
+                const end = new Date(req.query.end);
+                const filteredCalendar = calendarJSON.filter(event => {
+                    const eventDate = new Date(event.start);
+                    return eventDate >= start && eventDate <= end;
+                });
+                res.json(filteredCalendar);
+            } else {
+                res.json(calendarJSON);
+            }
+        }, 1000);
     } catch (error) {
         console.log(error);
         res.json({error: 'Could not get calendar data.'});

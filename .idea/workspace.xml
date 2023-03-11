@@ -4,8 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="production correction">
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="depencie dump-die removed for production">
+      <change afterPath="$PROJECT_DIR$/app/config/private.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/whatsmyiris.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/whatsmyiris.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.rest" beforeDir="false" afterPath="$PROJECT_DIR$/.rest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/excelCalendarData.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/excelCalendarData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/license.txt" beforeDir="false" afterPath="$PROJECT_DIR$/license.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-chrome-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/android-chrome-192x192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-chrome-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/android-chrome-512x512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/apple-touch-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/loading-banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/loading-banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/loading-calendar.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/loading-calendar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/wmi-logo-transparent.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/wmi-logo-transparent.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/wmi-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/wmi-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon-16x16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon-32x32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/animations.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/animations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/calendar-render.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/calendar-render.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/public/site.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/fullcalendar/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/daygrid.global.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/fullcalendar/daygrid.global.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/fr.global.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/fullcalendar/fr.global.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/list.global.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/fullcalendar/list.global.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/timegrid.global.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/fullcalendar/timegrid.global.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/error.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/error.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +58,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTTP Private Environment File" />
       </list>
     </option>
   </component>
@@ -78,10 +121,10 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration name=" | Calendar API" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/.rest" requestIdentifier="Calendar API" runType="Run single request">
+    <configuration name=" | Calendar API" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/.rest" requestIdentifier="Calendar API" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name=" | Index main route" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/.rest" index="2" requestIdentifier="Index main route" runType="Run single request">
+    <configuration name=" | Index main route" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/.rest" index="2" requestIdentifier="Index main route" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="calendarHandle.js" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/.nvm/versions/node/v18.12.1/bin/node" nameIsGenerated="true" path-to-js-file="calendarHandle.js" working-dir="$PROJECT_DIR$/app">
@@ -97,10 +140,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="HTTP Request. | Calendar API" />
+      <item itemvalue="HTTP Request. | Index main route" />
+      <item itemvalue="Node.js.calendarHandle.js" />
+      <item itemvalue="npm.dev" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request. | Index main route" />
         <item itemvalue="HTTP Request. | Calendar API" />
+        <item itemvalue="HTTP Request. | Index main route" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +202,15 @@
       <workItem from="1678140754969" duration="80000" />
       <workItem from="1678179352472" duration="7314000" />
       <workItem from="1678281159762" duration="132000" />
-      <workItem from="1678294874756" duration="1196000" />
+      <workItem from="1678294874756" duration="1922000" />
+      <workItem from="1678310712520" duration="1095000" />
+      <workItem from="1678344540195" duration="3397000" />
+      <workItem from="1678351513623" duration="102000" />
+      <workItem from="1678362673126" duration="9734000" />
+      <workItem from="1678435622276" duration="380000" />
+      <workItem from="1678448702246" duration="1791000" />
+      <workItem from="1678474985973" duration="597000" />
+      <workItem from="1678541604483" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="env for sharepoint auth&#10;&#10;all auth begining with SPAUTH in the .env file are now for sharepoint auth">
       <created>1675322054390</created>
@@ -379,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678294939944</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="depencie dump-die removed for production">
+      <created>1678296321038</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1678296321038</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +462,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="restfull test file" />
     <MESSAGE value="logo" />
     <MESSAGE value="loading screen" />
     <MESSAGE value="New styling and animations&#10;&#10;- Icon and logo&#10;- Color code&#10;- Fake loading screen" />
@@ -423,6 +486,7 @@
     <MESSAGE value="authentication?" />
     <MESSAGE value="ide files" />
     <MESSAGE value="production correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="production correction" />
+    <MESSAGE value="depencie dump-die removed for production" />
+    <option name="LAST_COMMIT_MESSAGE" value="depencie dump-die removed for production" />
   </component>
 </project>

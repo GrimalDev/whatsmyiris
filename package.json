@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nodemon ./app.js"
+    "preinstall": "npm i nodemon -g",
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.1",
@@ -21,10 +22,10 @@
     "morgan": "~1.9.1",
     "node-sp-auth": "^1.2.0",
     "node-sp-auth-config": "^3.0.5",
-    "sp-download": "^1.2.0"
+    "sp-download": "^1.2.0",
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4",
     "dump-die": "^1.0.0",
     "node-sass-middleware": "^1.0.1"
   }

@@ -19,26 +19,31 @@
     <% //Stylesheets %>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
+    <!--    <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>-->
+
     <% //full calendar imports %>
-    <script type="importmap">
-      {
-        "imports": {
-          "@fullcalendar/core": "https://cdn.skypack.dev/pin/@fullcalendar/core@v6.1.1-6ZgB0Pv3Yek381qRourC/mode=imports,min/optimized/@fullcalendar/core.js",
-          "@fullcalendar/daygrid": "https://cdn.skypack.dev/pin/@fullcalendar/daygrid@v6.1.1-RqZScTREejF8cFbXlCcz/mode=imports,min/optimized/@fullcalendar/daygrid.js",
-          "@fullcalendar/timegrid": "https://cdn.skypack.dev/pin/@fullcalendar/timegrid@v6.1.1-pbMnmEw6JSmwZA0klM5v/mode=imports,min/optimized/@fullcalendar/timegrid.js",
-          "@fullcalendar/list": "https://cdn.skypack.dev/pin/@fullcalendar/list@v6.1.1-2xlPEt14J0cGOl3MIgBP/mode=imports,min/optimized/@fullcalendar/list.js"
-        }
-      }
-    </script>
+<!--    <script type="importmap">-->
+<!--      {-->
+<!--        "imports": {-->
+<!--          "@fullcalendar/core": "https://cdn.skypack.dev/pin/@fullcalendar/core@v6.1.1-6ZgB0Pv3Yek381qRourC/mode=imports,min/optimized/@fullcalendar/core.js",-->
+<!--          "@fullcalendar/daygrid": "https://cdn.skypack.dev/pin/@fullcalendar/daygrid@v6.1.1-RqZScTREejF8cFbXlCcz/mode=imports,min/optimized/@fullcalendar/daygrid.js",-->
+<!--          "@fullcalendar/timegrid": "https://cdn.skypack.dev/pin/@fullcalendar/timegrid@v6.1.1-pbMnmEw6JSmwZA0klM5v/mode=imports,min/optimized/@fullcalendar/timegrid.js",-->
+<!--          "@fullcalendar/list": "https://cdn.skypack.dev/pin/@fullcalendar/list@v6.1.1-2xlPEt14J0cGOl3MIgBP/mode=imports,min/optimized/@fullcalendar/list.js"-->
+<!--        }-->
+<!--      }-->
+<!--    </script>-->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
 
     <% //full calendar lang %>
     <script src="/fullcalendar/core/locales/fr.js" type="module"></script>
 
     <% //full calendar config %>
-    <script defer src="/javascripts/calendar-render.js" type="module"></script>
+    <script>
+      <%- include('../public/javascripts/calendar-render.js') -%>
+    </script>
 
     <% //animations %>
-    <script src="/javascripts/animations.js" type="module"></script>
+    <script defer src="/javascripts/animations.js"></script>
 
   </head>
   <body>
@@ -111,6 +116,9 @@
             </div>
           </div>
       </div>
+<!--      <div id="date">-->
+<!--        <h1><%= date %></h1>-->
+<!--      </div>-->
       <div id="selectors" class="team-select__container">
         <!--Select teams-->
         <% for (let i = 0; i < teams.length; i++) { // teams is a local variable %>

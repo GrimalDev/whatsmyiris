@@ -110,14 +110,25 @@ main {
                 /* Not removed via appearance */
                 margin: 0;
                 font: inherit;
-                color: currentColor;
                 width: 1.15em;
                 height: 1.15em;
-                border: 0.15em solid currentColor;
                 border-radius: 0.15em;
                 transform: translateY(-0.075em);
                 display: grid;
                 place-content: center;
+
+                &#team-BTS1, &#team-BTS1-first {
+                    color: $BTS1;
+                    border: 0.15em solid $BTS1;
+                }
+                &#team-BTS2-SISR, &#team-BTS2-SISR-first {
+                    color: $BTS2-SISR;
+                    border: 0.15em solid $BTS2-SISR;
+                }
+                &#team-BTS2-SLAM, &#team-BTS2-SLAM-first {
+                    color: $BTS2-SLAM;
+                    border: 0.15em solid $BTS2-SLAM;
+                }
 
                 &::before {
                     content: "";
@@ -220,6 +231,8 @@ button:hover{
 
 /*---------DATE CONTAINER---------*/
 
+
+
 /*---------EVENT CONTAINER---------*/
 
 .team-BTS1 {
@@ -309,5 +322,8 @@ button:hover{
     //TODO: Side container should be hidden on mobile
     main {
         width: 100%;
+        height: 100%;
+
+        margin: .5rem;
     }
 }

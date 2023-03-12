@@ -1,9 +1,12 @@
 import express from "express";
-import pullExcelData from "../app/excelCalendarData.js";
-import extractDayInfos, { teams } from "../app/calendarHandle.js";
 import {fileURLToPath} from "url";
 import path from "path";
+import fs from "fs";
 const router = express.Router();
+
+//dotenv config
+import dotenv from "dotenv";
+dotenv.config();
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
@@ -15,7 +18,6 @@ router.get('/', async function (req, res, next) {
     const __dirname = path.dirname(__filename);
     //get the path to the excel file
     const excelCalendarPath = path.join(__dirname, '../src/calendar/main-calendar.xlsx');
-    const configPath = path.join(__dirname, '../app/config/private.json');
 
     //if calendar get request ask for the teams, return the teams
     if (req.query.teams === "") {
@@ -25,28 +27,30 @@ router.get('/', async function (req, res, next) {
     // console.log('--------------------------\nDATA NOT LIVE YET!!!!!!!!!!!!!!!!!!!!!!!!!!!\n--------------------------');
     // res.json(await extractDayInfos(excelCalendarPath));
 
-
-    // await excel handling with error handling
     try {
-        await pullExcelData(excelCalendarPath, configPath);
-        //time out to wait for the file to be downloaded
-        setTimeout(async () => {
-            const calendarJSON = await extractDayInfos(excelCalendarPath);
-            //return the calendar as json between the dates in the get request
-            if (req.query.start && req.query.end) {
-                const start = new Date(req.query.start);
-                const end = new Date(req.query.end);
-                const filteredCalendar = calendarJSON.filter(event => {
-                    const eventDate = new Date(event.start);
-                    return eventDate >= start && eventDate <= end;
-                });
-                res.json(filteredCalendar);
-            } else {
-                res.json(calendarJSON);
-            }
-        }, 1000);
+
+        //get the calendar json ('src/calendar/calendar.json')
+        const calendarJSON = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/calendar/calendar.json'), 'utf8'));
+
+        //return the calendar as json between the dates in the get request
+
+        //calendarJSON null protector
+        if (calendarJSON === null) { return res.json({error: 'Could not get calendar data.'}); }
+
+        if (req.query.start && req.query.end) {
+            const start = new Date(req.query.start);
+            const end = new Date(req.query.end);
+
+            const filteredCalendar = calendarJSON.filter(event => {
+                const eventDate = new Date(event.start);
+                return eventDate >= start && eventDate <= end;
+            });
+            res.json(filteredCalendar);
+        } else {
+            res.json(calendarJSON);
+        }
     } catch (error) {
-        console.log(error);
+        console.error(error);
         res.json({error: 'Could not get calendar data.'});
     }
 });

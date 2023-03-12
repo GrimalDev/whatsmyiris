@@ -1,8 +1,8 @@
 //full calendar js settings
-import {Calendar} from '@fullcalendar/core'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
-import listGridPlugin from '@fullcalendar/list'
+// import {Calendar} from '@fullcalendar/core'
+// import dayGridPlugin from '@fullcalendar/daygrid'
+// import timeGridPlugin from '@fullcalendar/timegrid'
+// import listGridPlugin from '@fullcalendar/list'
 
 
 async function filterCalendarAuto(calendar) {
@@ -75,24 +75,19 @@ async function eventInfoDisplay(info) {
 }
 
 const calendarOptions = {
-    plugins: [
-        dayGridPlugin,
-        timeGridPlugin,
-        listGridPlugin
-    ],
     weekends: false,
     headerToolbar: {
-        left: 'prev,next today',
+        left: 'prev,next today listWeek',
         center: 'title',
-        right: 'dayGridMonth timeGridWeek,timeGridDay,listWeek'
+        right: 'timeGridDay,timeGridWeek,dayGridMonth'
     },
-    initialView: 'timeGridWeek',
+    initialView: 'timeGridDay',
     //source for events is the calendar route
     events: {
         url: '/calendar',
         method: 'GET',
         failure: function () {
-            alert('there was an error while fetching events!');
+            alert('Il y a eu un problème avec le chargement des événements, rechargez la page !');
         },
     },
     expandRows: true,
@@ -118,7 +113,7 @@ const calendarOptions = {
 
 document.addEventListener('DOMContentLoaded', async function () {
     const calendarEl = document.getElementById('calendar')
-    const calendar = new Calendar(calendarEl, calendarOptions);
+    const calendar = new FullCalendar.Calendar(calendarEl, calendarOptions);
 
     await calendar.render();
 

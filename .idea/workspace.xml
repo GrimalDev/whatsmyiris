@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="server correction">
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="mobile view improuvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/private.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/excelCalendarData.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/excelCalendarData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/calendar-render.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/calendar-render.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/calendar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +172,9 @@
       <workItem from="1678474985973" duration="597000" />
       <workItem from="1678541604483" duration="11456000" />
       <workItem from="1678616089838" duration="4607000" />
-      <workItem from="1678649526274" duration="163000" />
+      <workItem from="1678649526274" duration="462000" />
+      <workItem from="1678652430126" duration="17000" />
+      <workItem from="1678723488413" duration="52000" />
     </task>
     <task id="LOCAL-00001" summary="env for sharepoint auth&#10;&#10;all auth begining with SPAUTH in the .env file are now for sharepoint auth">
       <created>1675322054390</created>
@@ -423,7 +414,35 @@
       <option name="project" value="LOCAL" />
       <updated>1678541696921</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="sass correction&#10;&#10;No sass in production">
+      <created>1678649840479</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1678649840479</updated>
+    </task>
+    <task id="LOCAL-00036" summary="remove config because auth are now in env">
+      <created>1678649866132</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1678649866132</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Calendar excel is now fetched every hour server side&#10;&#10;The fetch triggers the excel analysis and generates a json for the calendar route.">
+      <created>1678649935010</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1678649935010</updated>
+    </task>
+    <task id="LOCAL-00038" summary="mobile view improuvements">
+      <created>1678649951624</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1678649951624</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,11 +461,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="loading screen" />
-    <MESSAGE value="New styling and animations&#10;&#10;- Icon and logo&#10;- Color code&#10;- Fake loading screen" />
-    <MESSAGE value="Small style changes" />
-    <MESSAGE value="calendar route return all the dates" />
-    <MESSAGE value="render calendar options" />
     <MESSAGE value="Add event id&#10;&#10;Select Event with unique id" />
     <MESSAGE value="Calendar package&#10;&#10;Package with list, day and time grid" />
     <MESSAGE value="default index render" />
@@ -467,6 +481,11 @@
     <MESSAGE value="production correction" />
     <MESSAGE value="depencie dump-die removed for production" />
     <MESSAGE value="server correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="server correction" />
+    <MESSAGE value="authentication correction&#10;&#10;Auth information are now fetched from the environnement variables" />
+    <MESSAGE value="sass correction&#10;&#10;No sass in production" />
+    <MESSAGE value="remove config because auth are now in env" />
+    <MESSAGE value="Calendar excel is now fetched every hour server side&#10;&#10;The fetch triggers the excel analysis and generates a json for the calendar route." />
+    <MESSAGE value="mobile view improuvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="mobile view improuvements" />
   </component>
 </project>

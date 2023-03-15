@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="mobile view improuvements">
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="gtag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/calendar-render.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/calendar-render.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +176,10 @@
       <workItem from="1678616089838" duration="4607000" />
       <workItem from="1678649526274" duration="462000" />
       <workItem from="1678652430126" duration="17000" />
-      <workItem from="1678723488413" duration="52000" />
+      <workItem from="1678723488413" duration="517000" />
+      <workItem from="1678796322821" duration="435000" />
+      <workItem from="1678825683423" duration="7000" />
+      <workItem from="1678890901569" duration="1620000" />
     </task>
     <task id="LOCAL-00001" summary="env for sharepoint auth&#10;&#10;all auth begining with SPAUTH in the .env file are now for sharepoint auth">
       <created>1675322054390</created>
@@ -442,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678649951624</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="gtag">
+      <created>1678723572104</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1678723572104</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +473,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add event id&#10;&#10;Select Event with unique id" />
     <MESSAGE value="Calendar package&#10;&#10;Package with list, day and time grid" />
     <MESSAGE value="default index render" />
     <MESSAGE value="cdn package on import map" />
@@ -486,6 +497,7 @@
     <MESSAGE value="remove config because auth are now in env" />
     <MESSAGE value="Calendar excel is now fetched every hour server side&#10;&#10;The fetch triggers the excel analysis and generates a json for the calendar route." />
     <MESSAGE value="mobile view improuvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobile view improuvements" />
+    <MESSAGE value="gtag" />
+    <option name="LAST_COMMIT_MESSAGE" value="gtag" />
   </component>
 </project>

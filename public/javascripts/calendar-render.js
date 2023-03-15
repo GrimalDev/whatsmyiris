@@ -52,12 +52,19 @@ async function eventInfoDisplay(info) {
     eventPopupTitle.innerHTML = info.event.title;
     eventPopupDescription.innerHTML = info.event.extendedProps.team;
     //set time to hour in 24h format
-    const startTime = info.event.start.toLocaleTimeString('fr-FR', {
+    let startTime = new Date(info.event.start);
+    let endTime = new Date(info.event.end);
+
+    //remove 1 hour from the start and end date for correction of the time zone (very dirty)
+    startTime.setHours(startTime.getHours() - 1);
+    endTime.setHours(endTime.getHours() - 1);
+
+    startTime = startTime.toLocaleTimeString('fr-FR', {
         hour: '2-digit',
         minute: '2-digit',
         hour12: false
     });
-    const endTime = info.event.end.toLocaleTimeString('fr-FR', {
+    endTime = endTime.toLocaleTimeString('fr-FR', {
         hour: '2-digit',
         minute: '2-digit',
         hour12: false

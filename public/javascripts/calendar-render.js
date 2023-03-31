@@ -55,7 +55,7 @@ async function eventInfoDisplay(info) {
     let startTime = new Date(info.event.start);
     let endTime = new Date(info.event.end);
 
-    //remove 1 hour from the start and end date for correction of the time zone (very dirty)
+    //remove 2 hour from the start and end date for correction of the time zone (very dirty)
     startTime.setHours(startTime.getHours() - 1);
     endTime.setHours(endTime.getHours() - 1);
 

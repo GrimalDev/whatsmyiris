@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="gtag">
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="minor date bug fix&#10;&#10;on event click the event would be in UTC +2">
+      <change afterPath="$PROJECT_DIR$/app/calendarController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/calendar-render.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/calendar-render.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +54,7 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.12.1&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/thehiddengeek/WebstormProjects/whatsmyiris/src/libs/fullcalendar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/thehiddengeek/WebstormProjects/whatsmyiris/src/calendar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -71,6 +74,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/calendar" />
       <recent name="$PROJECT_DIR$/src/libs/fullcalendar" />
       <recent name="$PROJECT_DIR$/public/assets/images" />
       <recent name="$PROJECT_DIR$/public" />
@@ -179,7 +183,11 @@
       <workItem from="1678723488413" duration="517000" />
       <workItem from="1678796322821" duration="435000" />
       <workItem from="1678825683423" duration="7000" />
-      <workItem from="1678890901569" duration="1620000" />
+      <workItem from="1678890901569" duration="2461000" />
+      <workItem from="1678961464793" duration="1335000" />
+      <workItem from="1680092403822" duration="3192000" />
+      <workItem from="1680181498682" duration="914000" />
+      <workItem from="1680247578824" duration="2162000" />
     </task>
     <task id="LOCAL-00001" summary="env for sharepoint auth&#10;&#10;all auth begining with SPAUTH in the .env file are now for sharepoint auth">
       <created>1675322054390</created>
@@ -454,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678723572104</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="minor date bug fix&#10;&#10;on event click the event would be in UTC +2">
+      <created>1678900596148</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1678900596148</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +488,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Calendar package&#10;&#10;Package with list, day and time grid" />
     <MESSAGE value="default index render" />
     <MESSAGE value="cdn package on import map" />
     <MESSAGE value="Colormap update" />
@@ -498,6 +512,7 @@
     <MESSAGE value="Calendar excel is now fetched every hour server side&#10;&#10;The fetch triggers the excel analysis and generates a json for the calendar route." />
     <MESSAGE value="mobile view improuvements" />
     <MESSAGE value="gtag" />
-    <option name="LAST_COMMIT_MESSAGE" value="gtag" />
+    <MESSAGE value="minor date bug fix&#10;&#10;on event click the event would be in UTC +2" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor date bug fix&#10;&#10;on event click the event would be in UTC +2" />
   </component>
 </project>

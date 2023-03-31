@@ -4,7 +4,6 @@ import Excel from 'exceljs';
 //There is an Excel that defines a calendar. It is organized in blocks. One block represents a day and 5 blocks in a line separated with a column is a working week, ignoring the weekends. Form example:
 // first week: height is from line 5 to 20 and the days are the following: C to E, G to I, K to M, O to Q; S to U. The next week is then 2 lines under the first and has the same pattern.
 // Days: the 4 first lines of a block (day) is the head, ignore that. The first column of a block is the team 1, the second is team 2 and the third the team 3. In each column, from the fifth line to the last of the block, describes the class the team has were each line is an hour from 9h to 19h.
-
 //TODO: Make the code more generic, so it can be used if more teams are added and the teams columns change.
 //TODO: Add notes via the upper cells of a day
 export const teams = ['BTS1', 'BTS2-SISR', 'BTS2-SLAM'];
@@ -35,8 +34,16 @@ export default async function extractDayInfos(filePath) {
         if (currentCell.value === undefined) { continue; }
         //null protector
         if (currentCell.value === null) { continue; }
-        //empty protector
-        if (currentCell.value.trim() === '') { continue; }
+        // empty protector
+        try {
+            if (currentCell.value.trim() === '') { continue; }
+        } catch (error) {
+            //if current cell has a date than it is a start of the week
+            if (isDate(currentCell.value)) {
+                weeksStart.push(i-2);
+            }
+            continue;
+        }
 
         //if current cell has a date than it is a start of the week
         if (isDate(currentCell.value)) {
@@ -124,12 +131,13 @@ export default async function extractDayInfos(filePath) {
                         //set the end date to the next hour
                         tmpEvent.end.setHours(tmpEvent.end.getHours() + 1);
                     } else if (currentCell.value !== ' ') {
-                        //save the previous event
-                        events.push(tmpEvent);
 
                         //Adjust time error of server. Remove a day from the start and end date.
-                        // tmpEvent.start.setDate(tmpEvent.start.getDate() - 1);
-                        // tmpEvent.end.setDate(tmpEvent.end.getDate() - 1);
+                        tmpEvent.start.setDate(tmpEvent.start.getDate() - 1);
+                        tmpEvent.end.setDate(tmpEvent.end.getDate() - 1);
+
+                        //save the previous event
+                        events.push(tmpEvent);
 
                         //set the new temp event
                         tmpEvent = newTmpEvent;

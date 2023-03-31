@@ -4,12 +4,12 @@ import logger from 'morgan';
 import createError from 'http-errors';
 import {fileURLToPath} from "url";
 import fs from "fs";
+import { CronJob } from 'cron';
+import getCalendarJSON from './app/calendarController.js';
 
 //route imports
 import homeRouter from './routes/home.js';
 import calendarRouter from './routes/calendar.js';
-import pullExcelData from "./app/excelCalendarData.js";
-import extractDayInfos from "./app/calendarHandle.js";
 
 const app = express();
 const listeningPort = 80
@@ -68,16 +68,12 @@ app.use(function(err, req, res, next) {
 app.listen(listeningPort, (err) => {
   if (err) { throw err }
   console.log(`App running on http://localhost:${listeningPort} !`);
-})
+});
 
-//download the excel file every hour
-setInterval(async () => {
-  await pullExcelData('src/calendar/main-calendar.xlsx');
-  const calendarJSON = await extractDayInfos('src/calendar/main-calendar.xlsx');
-  //write the calendarJSON to a file
-  fs.writeFile('src/calendar/calendar.json', JSON.stringify(calendarJSON), (err) => {
-    if (err) {
-      console.error(err);
-    }
-  });
-}, 3600000);
+//if the calendar.json file does not exist, create it and call the function to get the calendar
+if (!fs.existsSync(path.join(__dirname, 'src/calendar/calendar.json'))) {
+    getCalendarJSON();
+}
+
+//Add cron to call the calendarController function every hour in paris time
+const job = new CronJob('0 0 * * * *', getCalendarJSON, null, true, 'Europe/Paris');

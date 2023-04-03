@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="minor date bug fix&#10;&#10;on event click the event would be in UTC +2">
-      <change afterPath="$PROJECT_DIR$/app/calendarController.js" afterDir="false" />
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="minor date bug fix&#10;&#10;on event click the event would be in UTC +1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/calendar-render.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/calendar-render.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/calendarController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,6 +183,8 @@
       <workItem from="1680092403822" duration="3192000" />
       <workItem from="1680181498682" duration="914000" />
       <workItem from="1680247578824" duration="2162000" />
+      <workItem from="1680250235198" duration="127000" />
+      <workItem from="1680558277136" duration="162000" />
     </task>
     <task id="LOCAL-00001" summary="env for sharepoint auth&#10;&#10;all auth begining with SPAUTH in the .env file are now for sharepoint auth">
       <created>1675322054390</created>
@@ -469,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678900596148</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="minor date bug fix&#10;&#10;on event click the event would be in UTC +1">
+      <created>1680250295174</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1680250295174</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +492,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="default index render" />
     <MESSAGE value="cdn package on import map" />
     <MESSAGE value="Colormap update" />
     <MESSAGE value="home route is the old index route" />
@@ -513,6 +516,7 @@
     <MESSAGE value="mobile view improuvements" />
     <MESSAGE value="gtag" />
     <MESSAGE value="minor date bug fix&#10;&#10;on event click the event would be in UTC +2" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor date bug fix&#10;&#10;on event click the event would be in UTC +2" />
+    <MESSAGE value="minor date bug fix&#10;&#10;on event click the event would be in UTC +1" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor date bug fix&#10;&#10;on event click the event would be in UTC +1" />
   </component>
 </project>

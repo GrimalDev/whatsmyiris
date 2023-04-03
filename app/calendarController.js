@@ -18,6 +18,10 @@ export default async function getCalendarJSON() {
 
     const calendarJSON = await extractDayInfos(calendarExcelPath);
     //write the calendarJSON to a file
+
+    //If the data is null, empty or undefined, return
+    if (!calendarJSON) { return; }
+
     try {
         fs.writeFileSync(calendarJSONPath, JSON.stringify(calendarJSON));
         console.log('Calendar JSON file created');

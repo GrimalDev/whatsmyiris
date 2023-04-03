@@ -20,7 +20,7 @@ export default async function getCalendarJSON() {
     //write the calendarJSON to a file
 
     //If the data is null, empty or undefined, return
-    if (!calendarJSON) { return; }
+    if (calendarJSON === null || calendarJSON === "") { return; }
 
     try {
         fs.writeFileSync(calendarJSONPath, JSON.stringify(calendarJSON));

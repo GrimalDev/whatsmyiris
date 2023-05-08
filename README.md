@@ -19,3 +19,4 @@ Access the website via: **[whatsmyiris.fr](whatsmyiris.fr)**
 
 ### FOSSA check completed
 https://app.fossa.com/attribution/24d067c1-e27c-487f-98da-3c4d8162f5be
+https://app.fossa.com/projects/git%2Bgithub.com%2FGrimalDev%2Fwhatsmyiris?utm_source=share_link

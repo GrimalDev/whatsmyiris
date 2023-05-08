@@ -16,3 +16,6 @@ Access the website via: **[whatsmyiris.fr](whatsmyiris.fr)**
  
 ###   LICENSING
 #### **Under *[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)* license**
+
+### FOSSA check completed
+https://app.fossa.com/attribution/24d067c1-e27c-487f-98da-3c4d8162f5be

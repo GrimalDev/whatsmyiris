@@ -6,6 +6,7 @@ import {fileURLToPath} from "url";
 import fs from "fs";
 import { CronJob } from 'cron';
 import getCalendarJSON from './app/calendarController.js';
+import rateLimit from 'express-rate-limit';
 
 //dotenv config
 import dotenv from "dotenv";
@@ -27,6 +28,21 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+//load balancer option for the rate limiter ip
+if (process.env.NODE_ENV === 'production') {
+  app.set('trust proxy', 1);
+}
+
+const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+    legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+})
+
+// Apply the rate limiting middleware to API calls only
+app.use('/calendar', apiLimiter)
 
 // if state is not in production use sass middleware
 if (process.env.NODE_ENV !== 'production') {

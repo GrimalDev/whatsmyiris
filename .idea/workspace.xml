@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="Future route to add custom events">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="ignore workspace xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +27,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5a6dc145-f62b-41c3-8865-f9fe9fedf9c1" />
+        <option name="url" value="https://github.com/GrimalDev/whatsmyiris.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -37,38 +47,38 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "javascript.nodejs.core.library.configured.version": "18.12.1",
-    "javascript.nodejs.core.library.typings.version": "18.11.19",
-    "last_opened_file_path": "/Users/thehiddengeek/WebstormProjects/whatsmyiris/src/libs/fullcalendar/@6.1.4",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "/Users/thehiddengeek/.nvm/versions/node/v18.12.1/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "JavaScript.Libraries",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.12.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/thehiddengeek/WebstormProjects/whatsmyiris/src/libs/fullcalendar/@6.1.4&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/Users/thehiddengeek/.nvm/versions/node/v18.12.1/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;JavaScript.Libraries&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4" />
@@ -197,21 +207,7 @@
       <workItem from="1685983906856" duration="1196000" />
       <workItem from="1686311729356" duration="7393000" />
       <workItem from="1686324805900" duration="4871000" />
-      <workItem from="1686342197932" duration="22131000" />
-    </task>
-    <task id="LOCAL-00006" summary=".idea ignore">
-      <created>1675615049280</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1675615049280</updated>
-    </task>
-    <task id="LOCAL-00007" summary="restfull test file">
-      <created>1675615060272</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1675615060272</updated>
+      <workItem from="1686342197932" duration="24118000" />
     </task>
     <task id="LOCAL-00008" summary="logo">
       <created>1675615126460</created>
@@ -542,7 +538,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686489988088</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="ignore workspace xml">
+      <created>1686490026663</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1686490026663</updated>
+    </task>
+    <task id="LOCAL-00056" summary="ignore workspace xml">
+      <created>1686490034581</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1686490034581</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +563,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -561,7 +583,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="authentication?" />
     <MESSAGE value="ide files" />
     <MESSAGE value="production correction" />
     <MESSAGE value="depencie dump-die removed for production" />
@@ -586,6 +607,7 @@
     <MESSAGE value="Local libraries&#10;&#10;Stoped using CDN" />
     <MESSAGE value="Style changes for better semantic" />
     <MESSAGE value="Future route to add custom events" />
-    <option name="LAST_COMMIT_MESSAGE" value="Future route to add custom events" />
+    <MESSAGE value="ignore workspace xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore workspace xml" />
   </component>
 </project>

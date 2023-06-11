@@ -2,10 +2,13 @@ import express from "express";
 import {fileURLToPath} from "url";
 import path from "path";
 import fs from "fs";
-const router = express.Router();
-
 //dotenv config
 import dotenv from "dotenv";
+import {teams} from "../app/calendarHandle.js";
+import getCalendarJSON from "../app/calendarController.js";
+
+const router = express.Router();
+
 dotenv.config();
 
 /* GET home page. */
@@ -16,8 +19,6 @@ router.get('/', async function (req, res, next) {
     //Get the absolute path of th src folder
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
-    //get the path to the excel file
-    const excelCalendarPath = path.join(__dirname, '../src/calendar/main-calendar.xlsx');
 
     //if calendar get request ask for the teams, return the teams
     if (req.query.teams === "") {
@@ -32,6 +33,8 @@ router.get('/', async function (req, res, next) {
         //get the calendar json ('src/calendar/calendar.json')
         const calendarJSON = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/calendar/calendar.json'), 'utf8'));
 
+        let calendarReturned = {};
+
         //return the calendar as json between the dates in the get request
 
         //calendarJSON null protector
@@ -41,16 +44,19 @@ router.get('/', async function (req, res, next) {
             const start = new Date(req.query.start);
             const end = new Date(req.query.end);
 
-            const filteredCalendar = calendarJSON.filter(event => {
+            calendarReturned = calendarJSON.filter(event => {
                 const eventDate = new Date(event.start);
                 return eventDate >= start && eventDate <= end;
             });
-            res.json(filteredCalendar);
         } else {
-            res.json(calendarJSON);
+            calendarReturned = calendarJSON;
         }
+
+        res.json(calendarReturned)
+
     } catch (error) {
         console.error(error);
+        await getCalendarJSON();
         res.json({error: 'Could not get calendar data.'});
     }
 });

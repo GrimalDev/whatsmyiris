@@ -3,6 +3,7 @@
 
 # JetBrain
 .idea
+workspace.xml
 
 # rest requests tests
 .rest

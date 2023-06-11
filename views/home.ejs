@@ -17,7 +17,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <% //Stylesheets %>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/main-style.css' />
 
     <!--    <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>-->
 
@@ -56,91 +56,95 @@
 
   </head>
   <body>
-    <div id="loading-screen">
-        <div id="loading-screen__content">
-          <img id="loading-screen__backimage" src="/assets/images/loading-calendar.png" alt="Loading calendar">
-          <img id="loading-screen__frontimage" src="/assets/images/loading-banner.png" alt="Loading banner">
-        </div>
-    </div>
-    <div id="choose-team">
-      <div>
-        <h1>Welcome to What's my IRIS</h1>
-        <h2><%= date %></h2>
-        <h3>Choisissez votre équipe</h3>
-      </div>
-      <div id="choose-team__teams" class="team-select__container">
-        <div class="team-select">
-            <label class="team-select__content" for="team-BTS1-first">
-              <input class="team-select" type="checkbox" id="team-BTS1-first" name="BTS1" value="BTS1">
-              BTS1
-            </label>
-        </div>
-        <div class="team-select">
-            <label class="team-select__content" for="team-BTS2-SISR-first">
-              <input class="team-select" type="checkbox" id="team-BTS2-SISR-first" name="BTS2-SISR" value="BTS2-SISR">
-              BTS2-SISR
-            </label>
-        </div>
-        <div class="team-select">
-            <label class="team-select__content" for="team-BTS2-SLAM-first">
-              <input class="team-select" type="checkbox" id="team-BTS2-SLAM-first" name="BTS2-SLAM" value="BTS2-SLAM">
-              BTS2-SLAM
-            </label>
-        </div>
-      </div>
-      <div id="choose-team__action">
-        <button id="foot" onclick="start()"><button class="button-os" onclick="start()"><a href="#">SUIVANT</a></button></button>
-        <script>
-          function start() {
-            //check the corresponding team selects according to the previous selected ones
-            const teamsFirst = document.querySelectorAll("#choose-team__teams .team-select .team-select__content input");
-            const teamsInterface = document.querySelectorAll("#selectors .team-select .team-select__content input");
-            const teamsCheckedFirst = [];
-            for (let i = 0; i < teamsFirst.length; i++) {
-              if (teamsFirst[i].checked) {
-                teamsCheckedFirst.push(teamsFirst[i].value);
-              }
-            }
-            for (let i = 0; i < teamsInterface.length; i++) {
-              if (teamsCheckedFirst.includes(teamsInterface[i].value)) {
-                teamsInterface[i].checked = true;
-              }
-            }
-            document.getElementById("choose-team").style.display = "none";
-          }
-        </script>
-      </div>
-    </div>
-    <main>
-      <!--Popup-->
-      <div id="event-popup">
-          <div id="event-popup__content">
-            <div id="event-popup__header">
-                <h2 id="event-popup__title"></h2>
+    <section class="page__container" id="choice-page__container">
+        <div id="loading-screen">
+            <div id="loading-screen__content">
+                <img id="loading-screen__backimage" src="/assets/images/loading-calendar.png" alt="Loading calendar">
+                <img id="loading-screen__frontimage" src="/assets/images/loading-banner.png" alt="Loading banner">
             </div>
-            <div id="event-popup__body">
-                <div id="event-popup__description"></div>
-                <div id="event-popup__location"></div>
-                <div id="event-popup__time"></div>
-            </div>
-          </div>
-      </div>
-<!--      <div id="date">-->
-<!--        <h1><%= date %></h1>-->
-<!--      </div>-->
-      <div id="selectors" class="team-select__container">
-        <!--Select teams-->
-        <% for (let i = 0; i < teams.length; i++) { // teams is a local variable %>
-        <div class="team-select">
-          <label class="team-select__content" for="team-<%= teams[i] %>">
-            <input class="team-select" type="checkbox" id="team-<%= teams[i] %>" name="team-<%= teams[i] %>" value="<%= teams[i] %>">
-            <%= teams[i] %>
-          </label>
         </div>
-        <% } %>
-      </div>
-      <!--Calendar-->
-      <div id="calendar"></div>
+        <div id="choose-team">
+            <div>
+                <h1>Welcome to What's my IRIS</h1>
+                <h2><%= date %></h2>
+                <h3>Choisissez votre équipe</h3>
+            </div>
+            <div id="choose-team__teams" class="team-select__container">
+                <div class="team-select">
+                    <label class="team-select__content" for="team-BTS1-first">
+                        <input class="team-select" type="checkbox" id="team-BTS1-first" name="BTS1" value="BTS1">
+                        BTS1
+                    </label>
+                </div>
+                <div class="team-select">
+                    <label class="team-select__content" for="team-BTS2-SISR-first">
+                        <input class="team-select" type="checkbox" id="team-BTS2-SISR-first" name="BTS2-SISR" value="BTS2-SISR">
+                        BTS2-SISR
+                    </label>
+                </div>
+                <div class="team-select">
+                    <label class="team-select__content" for="team-BTS2-SLAM-first">
+                        <input class="team-select" type="checkbox" id="team-BTS2-SLAM-first" name="BTS2-SLAM" value="BTS2-SLAM">
+                        BTS2-SLAM
+                    </label>
+                </div>
+            </div>
+            <div id="choose-team__action">
+                <button id="foot" onclick="start()"><button class="button-os" onclick="start()"><a href="#">SUIVANT</a></button></button>
+                <script>
+                    function start() {
+                        //check the corresponding team selects according to the previous selected ones
+                        const teamsFirst = document.querySelectorAll("#choose-team__teams .team-select .team-select__content input");
+                        const teamsInterface = document.querySelectorAll("#selectors .team-select .team-select__content input");
+                        const teamsCheckedFirst = [];
+                        for (let i = 0; i < teamsFirst.length; i++) {
+                            if (teamsFirst[i].checked) {
+                                teamsCheckedFirst.push(teamsFirst[i].value);
+                            }
+                        }
+                        for (let i = 0; i < teamsInterface.length; i++) {
+                            if (teamsCheckedFirst.includes(teamsInterface[i].value)) {
+                                teamsInterface[i].checked = true;
+                            }
+                        }
+                        document.getElementById("choose-team").style.display = "none";
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+    <main class="page__container">
+        <section class="page__container" id="calendar-page__container">
+            <!--Popup-->
+            <div id="event-popup">
+                <div id="event-popup__content">
+                    <div id="event-popup__header">
+                        <h2 id="event-popup__title"></h2>
+                    </div>
+                    <div id="event-popup__body">
+                        <div id="event-popup__description"></div>
+                        <div id="event-popup__location"></div>
+                        <div id="event-popup__time"></div>
+                    </div>
+                </div>
+            </div>
+            <!--      <div id="date">-->
+            <!--        <h1><%= date %></h1>-->
+            <!--      </div>-->
+            <div id="selectors" class="team-select__container">
+                <!--Select teams-->
+                <% for (let i = 0; i < teams.length; i++) { // teams is a local variable %>
+                <div class="team-select">
+                    <label class="team-select__content" for="team-<%= teams[i] %>">
+                        <input class="team-select" type="checkbox" id="team-<%= teams[i] %>" name="team-<%= teams[i] %>" value="<%= teams[i] %>">
+                        <%= teams[i] %>
+                    </label>
+                </div>
+                <% } %>
+            </div>
+            <!--Calendar-->
+            <div id="calendar"></div>
+        </section>
     </main>
   </body>
 </html>

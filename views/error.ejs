@@ -1,3 +1,26 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Erreur</title>
+    <link rel="stylesheet" href="/stylesheets/error-style.css">
+</head>
+<body>
+    <header class="page__container">
+        <h1><%= message %></h1>
+    </header>
+    <main class="page__container center">
+        <% if (error.stack) { %>
+            <section id="errors__container">
+                <h2 class="errors__content__title"><%= error.status %></h2>
+                <pre class="errors__content__stack"><%= error.stack %></pre>
+            </section>
+        <% } else { %>
+            <a id="errors-home-redirect" href="/">Retourner à la page d'accueil</a>
+        <% } %>
+    </main>
+</body>
+</html>

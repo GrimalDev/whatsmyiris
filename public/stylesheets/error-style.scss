@@ -1,0 +1,29 @@
+/*---------IMPORTS---------*/
+
+@import "colors";
+@import "main-style";
+
+/*---------Error Page---------*/
+
+.page__container.center {
+    align-items: center !important;
+    font-size: clamp(16px, 14vw, 42px);
+}
+
+#errors__container {
+    flex-direction: column;
+    .errors__content {
+        &__title {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        &__stack {
+            color: #ef6464;
+            background-color: #F5F6FA;
+            font-weight: 300;
+            padding: 2rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+        }
+    }
+}

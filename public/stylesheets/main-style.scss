@@ -8,30 +8,30 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: $bg-body;
 }
 
 body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.page__container {
+    font: 14px Helvetica-neue, Arial, sans-serif;
     background-color: $bg-body;
     color: $text-color;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: calc(100% - 2rem);
-    margin: 0 !important;
-    padding: 0 0 0 0 !important;
 }
 
 main {
-    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    width: 95%;
-    height: calc(100% - 5rem);
-    background-color: $bg-containers;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 #calendar {
@@ -206,9 +206,9 @@ button:hover{
     margin: auto;
     background-color: #f9f8fc;
     border: 2.5px solid #0e172c;
-    transition: background-color 1.2s;
     transition-duration: 1s;
     transition: .5s;
+    cursor: pointer;
 }
 
 .button-os:hover{
@@ -225,13 +225,23 @@ button:hover{
     transition: .5s;
 }
 
-.button-os a:hover{
+.button-os:hover a{
     letter-spacing: 5px;
 }
 
 /*---------DATE CONTAINER---------*/
 
-
+#calendar-page__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: calc(100% - 5rem);
+    background-color: $bg-containers;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 2rem;
+}
 
 /*---------EVENT CONTAINER---------*/
 

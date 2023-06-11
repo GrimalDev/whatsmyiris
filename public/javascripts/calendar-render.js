@@ -51,25 +51,31 @@ async function eventInfoDisplay(info) {
     //set the title of event, the team name and the date
     eventPopupTitle.innerHTML = info.event.title;
     eventPopupDescription.innerHTML = info.event.extendedProps.team;
-    //set time to hour in 24h format
-    let startTime = new Date(info.event.start);
-    let endTime = new Date(info.event.end);
 
-    //remove 2 hour from the start and end date for correction of the time zone (very dirty)
-    startTime.setHours(startTime.getHours() - 1);
-    endTime.setHours(endTime.getHours() - 1);
+    //test all-day event
+    if (info.event.allDay === false) {
+        //set time to hour in 24h format
+        let startTime = new Date(info.event.start);
+        let endTime = new Date(info.event.end);
 
-    startTime = startTime.toLocaleTimeString('fr-FR', {
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
-    });
-    endTime = endTime.toLocaleTimeString('fr-FR', {
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
-    });
-    eventPopupTime.innerHTML = startTime + " - " + endTime;
+        //correct with local timezone and season time
+        startTime = new Date(startTime.getTime() + startTime.getTimezoneOffset() * 60 * 1000);
+        endTime = new Date(endTime.getTime() + endTime.getTimezoneOffset() * 60 * 1000);
+
+        startTime = startTime.toLocaleTimeString('fr-FR', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        });
+        endTime = endTime.toLocaleTimeString('fr-FR', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        });
+        eventPopupTime.innerHTML = startTime + " - " + endTime;
+    } else {
+        eventPopupTime.innerHTML = "Toute la journée";
+    }
 
     eventPopup.style.display = "flex";
 
@@ -88,6 +94,7 @@ const calendarOptions = {
         center: 'title',
         right: 'timeGridDay,timeGridWeek,dayGridMonth'
     },
+    //multimonth
     initialView: 'timeGridDay',
     //source for events is the calendar route
     events: {
@@ -118,7 +125,7 @@ const calendarOptions = {
     // eventRender: () => filterCalendar()
 }
 
-document.addEventListener('DOMContentLoaded', async function () {
+window.onload = async function () {
     const calendarEl = document.getElementById('calendar')
     const calendar = new FullCalendar.Calendar(calendarEl, calendarOptions);
 
@@ -140,4 +147,4 @@ document.addEventListener('DOMContentLoaded', async function () {
         childList: true,
         subtree: true
     });
-});
+}

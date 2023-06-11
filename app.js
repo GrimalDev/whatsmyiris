@@ -55,14 +55,20 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use(function (err, req, res, next) {
+    // render the error page
+    res.status(err.status || 500);
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // set locals, only providing error in development
+    res.locals.message = err.status === 404 ? "Vous vous êtes perdu?" : "Une erreur est survenue...";
+    res.locals.error = process.env.NODE_ENV !== 'production' ? err : {};
+
+    //By choice, there is no error page
+    if (process.env.NODE_ENV === 'production' ) {
+        res.redirect('/')
+    }
+
+    res.render('error');
 });
 
 app.listen(listeningPort, (err) => {

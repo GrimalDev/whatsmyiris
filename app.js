@@ -71,15 +71,16 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
+//if the calendar.json file does not exist, create it and call the function to get the calendar
+if (!fs.existsSync(path.join(__dirname, 'src/calendar/calendar.json'))) {
+    await getCalendarJSON();
+}
+
 app.listen(listeningPort, (err) => {
   if (err) { throw err }
   console.log(`App running on http://localhost:${listeningPort} !`);
 });
 
-//if the calendar.json file does not exist, create it and call the function to get the calendar
-if (!fs.existsSync(path.join(__dirname, 'src/calendar/calendar.json'))) {
-    getCalendarJSON();
-}
-
 //Add cron to call the calendarController function every hour in paris time
 const job = new CronJob('0 0 * * * *', getCalendarJSON, null, true, 'Europe/Paris');
+//TODO: LOG THE JOB

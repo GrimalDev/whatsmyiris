@@ -7,6 +7,10 @@ import fs from "fs";
 import { CronJob } from 'cron';
 import getCalendarJSON from './app/calendarController.js';
 
+//dotenv config
+import dotenv from "dotenv";
+dotenv.config();
+
 //route imports
 import homeRouter from './routes/home.js';
 import calendarRouter from './routes/calendar.js';
@@ -45,7 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', homeRouter);
 app.use('/calendar', calendarRouter);
 //return fullCalendar libraries
-app.use('/fullcalendar', express.static(path.join(__dirname, 'node_modules/@fullcalendar/')));
+app.use('/libs/fullcalendar', express.static(path.join(__dirname, 'src/libs/fullcalendar/')));
 
 //TODO: Oauth microsoft mediaschool
 

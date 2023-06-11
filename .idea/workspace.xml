@@ -4,427 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="New info missing bug fix&#10;&#10;Bug: When a new data fetch failed, a new calendar JSON would have still been created with &quot;null&quot; in it.&#10;&#10;fix: Simple protector">
-      <change afterPath="$PROJECT_DIR$/public/stylesheets/error-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stylesheets/error-style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stylesheets/error-style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stylesheets/main-style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/event.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/index.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/af.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/af.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/af.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/af.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-dz.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-dz.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-dz.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-dz.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-dz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-kw.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-kw.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-kw.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-kw.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-kw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ly.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ly.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ly.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ly.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ma.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ma.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ma.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ma.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-ma.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-sa.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-sa.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-sa.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-sa.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-sa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-tn.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-tn.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-tn.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-tn.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar-tn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/az.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/az.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/az.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/az.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bg.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bg.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bg.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bg.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bn.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bn.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bn.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bn.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bs.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bs.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bs.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bs.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ca.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ca.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ca.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ca.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cs.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cs.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cs.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cs.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cy.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cy.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cy.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cy.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/cy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/da.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/da.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/da.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/da.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de-at.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de-at.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de-at.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de-at.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de-at.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/el.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/el.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/el.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/el.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-au.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-au.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-au.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-au.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-gb.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-gb.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-gb.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-gb.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-nz.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-nz.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-nz.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-nz.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/en-nz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eo.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eo.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eo.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eo.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es-us.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es-us.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es-us.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es-us.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es-us.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/et.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/et.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/et.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/et.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eu.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eu.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eu.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eu.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fa.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fa.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fa.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fa.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fi.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fi.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fi.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fi.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ca.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ca.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ca.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ca.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ch.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ch.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ch.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ch.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/gl.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/gl.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/gl.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/gl.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/he.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/he.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/he.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/he.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hi.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hi.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hi.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hi.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hr.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hr.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hr.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hr.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hu.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hu.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hu.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hu.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hy-am.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hy-am.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hy-am.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hy-am.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/hy-am.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/id.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/id.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/id.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/id.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/is.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/is.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/is.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/is.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/it.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/it.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/it.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/it.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ja.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ja.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ja.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ja.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ka.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ka.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ka.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ka.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/kk.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/kk.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/kk.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/kk.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/km.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/km.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/km.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/km.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ko.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ko.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ko.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ko.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ku.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ku.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ku.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ku.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lb.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lb.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lb.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lb.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lt.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lt.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lt.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lt.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lv.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lv.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lv.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lv.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/mk.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/mk.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/mk.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/mk.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ms.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ms.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ms.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ms.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nb.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nb.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nb.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nb.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ne.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ne.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ne.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ne.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nl.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nl.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nl.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nl.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nn.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nn.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nn.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nn.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/nn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pl.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pl.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pl.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pl.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt-br.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt-br.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt-br.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt-br.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ro.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ro.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ro.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ro.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ru.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ru.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ru.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ru.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/si-lk.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/si-lk.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/si-lk.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/si-lk.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/si-lk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sk.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sk.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sk.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sk.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sl.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sl.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sl.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sl.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sm.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sm.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sm.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sm.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sq.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sq.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sq.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sq.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr-cyrl.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr-cyrl.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr-cyrl.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr-cyrl.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr-cyrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sv.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sv.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sv.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sv.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ta-in.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ta-in.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ta-in.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ta-in.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ta-in.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/th.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/th.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/th.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/th.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/tr.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/tr.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/tr.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/tr.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ug.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ug.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ug.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ug.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/ug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uk.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uk.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uk.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uk.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz-cy.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz-cy.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz-cy.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz-cy.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz-cy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/uz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/vi.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/vi.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/vi.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/vi.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-cn.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-cn.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-cn.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-cn.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-tw.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-tw.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-tw.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-tw.global.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/zh-tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/event.ejs" afterDir="false" />
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="Future route to add custom events">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/calendarController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/excelCalendarData.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/excelCalendarData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/calendar-render.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/calendar-render.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/main-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/main-style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/daygrid.global.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/fr.global.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/fullcalendar/@6.1.4/core/locales/fr.global.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/list.global.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/fullcalendar/timegrid.global.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/error.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/error.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -615,42 +197,7 @@
       <workItem from="1685983906856" duration="1196000" />
       <workItem from="1686311729356" duration="7393000" />
       <workItem from="1686324805900" duration="4871000" />
-      <workItem from="1686342197932" duration="21436000" />
-    </task>
-    <task id="LOCAL-00001" summary="env for sharepoint auth&#10;&#10;all auth begining with SPAUTH in the .env file are now for sharepoint auth">
-      <created>1675322054390</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1675322054390</updated>
-    </task>
-    <task id="LOCAL-00002" summary="IDE files">
-      <created>1675322076352</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1675322076352</updated>
-    </task>
-    <task id="LOCAL-00003" summary="IDE files">
-      <created>1675322089978</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1675322089978</updated>
-    </task>
-    <task id="LOCAL-00004" summary="headless auth config&#10;&#10;no prompt interaction on sharepoint auth">
-      <created>1675322162869</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1675322162869</updated>
-    </task>
-    <task id="LOCAL-00005" summary="converts excel to events">
-      <created>1675547532339</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1675547532339</updated>
+      <workItem from="1686342197932" duration="22131000" />
     </task>
     <task id="LOCAL-00006" summary=".idea ignore">
       <created>1675615049280</created>
@@ -918,7 +465,84 @@
       <option name="project" value="LOCAL" />
       <updated>1680558615199</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="locales&#10;&#10;locales used by fullcalendar">
+      <created>1686489594710</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489594710</updated>
+    </task>
+    <task id="LOCAL-00045" summary="npm list verification">
+      <created>1686489616729</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489616729</updated>
+    </task>
+    <task id="LOCAL-00046" summary="change error behaviour&#10;&#10;Custom error page for dev env and redirection to home on production">
+      <created>1686489712387</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489712387</updated>
+    </task>
+    <task id="LOCAL-00047" summary="the excel file is now downloaded at server start&#10;&#10;The server won't start without having chacked if the calendar json is present.">
+      <created>1686489789516</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489789516</updated>
+    </task>
+    <task id="LOCAL-00048" summary="libs path to fullcalendar libraries">
+      <created>1686489818211</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489818211</updated>
+    </task>
+    <task id="LOCAL-00049" summary="small changes if organization">
+      <created>1686489835602</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489835602</updated>
+    </task>
+    <task id="LOCAL-00050" summary="all-day support on details&#10;&#10;When clicking on an event for detail the application would display wrong informations">
+      <created>1686489881695</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489881696</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Better error handling">
+      <created>1686489915551</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489915551</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Local libraries&#10;&#10;Stoped using CDN">
+      <created>1686489947229</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489947229</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Style changes for better semantic">
+      <created>1686489966373</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489966373</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Future route to add custom events">
+      <created>1686489988088</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489988088</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -937,17 +561,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Colormap update" />
-    <MESSAGE value="home route is the old index route" />
-    <MESSAGE value="index renamed to home" />
-    <MESSAGE value="Docker deployement files" />
-    <MESSAGE value="Add date selector on calendar requests" />
-    <MESSAGE value="button team selection and redner bug fixes" />
-    <MESSAGE value="holiday detection&#10;&#10;(still needs fixes)" />
-    <MESSAGE value="minor design changes&#10;&#10;- colors&#10;- sizes" />
-    <MESSAGE value="selection page&#10;&#10;There is now a first landing page to pre-select the team you want to display.&#10;The goal is to avoid getting overflowed by colors at first sight." />
-    <MESSAGE value="button for the first team selection page" />
-    <MESSAGE value="The html for the selection page" />
     <MESSAGE value="authentication?" />
     <MESSAGE value="ide files" />
     <MESSAGE value="production correction" />
@@ -962,6 +575,17 @@
     <MESSAGE value="minor date bug fix&#10;&#10;on event click the event would be in UTC +2" />
     <MESSAGE value="minor date bug fix&#10;&#10;on event click the event would be in UTC +1" />
     <MESSAGE value="New info missing bug fix&#10;&#10;Bug: When a new data fetch failed, a new calendar JSON would have still been created with &quot;null&quot; in it.&#10;&#10;fix: Simple protector" />
-    <option name="LAST_COMMIT_MESSAGE" value="New info missing bug fix&#10;&#10;Bug: When a new data fetch failed, a new calendar JSON would have still been created with &quot;null&quot; in it.&#10;&#10;fix: Simple protector" />
+    <MESSAGE value="locales&#10;&#10;locales used by fullcalendar" />
+    <MESSAGE value="npm list verification" />
+    <MESSAGE value="change error behaviour&#10;&#10;Custom error page for dev env and redirection to home on production" />
+    <MESSAGE value="the excel file is now downloaded at server start&#10;&#10;The server won't start without having chacked if the calendar json is present." />
+    <MESSAGE value="libs path to fullcalendar libraries" />
+    <MESSAGE value="small changes if organization" />
+    <MESSAGE value="all-day support on details&#10;&#10;When clicking on an event for detail the application would display wrong informations" />
+    <MESSAGE value="Better error handling" />
+    <MESSAGE value="Local libraries&#10;&#10;Stoped using CDN" />
+    <MESSAGE value="Style changes for better semantic" />
+    <MESSAGE value="Future route to add custom events" />
+    <option name="LAST_COMMIT_MESSAGE" value="Future route to add custom events" />
   </component>
 </project>

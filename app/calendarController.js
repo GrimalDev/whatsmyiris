@@ -26,6 +26,6 @@ export default async function getCalendarJSON() {
         fs.writeFileSync(calendarJSONPath, JSON.stringify(calendarJSON));
         console.log('Calendar JSON file created');
     } catch (error) {
-        console.error(error);
+        console.error("Error while saving JSON file: ", error);
     }
 }

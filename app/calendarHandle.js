@@ -104,11 +104,12 @@ export default async function extractDayInfos(filePath) {
                         start: eventStart,
                         end: eventEnd,
                         team: teams[team],
-                        classNames: [ `team-${teams[team]}` ]
+                        classNames: [ `team-${teams[team]}` ],
+                        allDay: false
                     }
 
                     //detect holidays if title contains 'vacances' and create allday event
-                    if (currentCell.value.toLowerCase().includes('vacanves')) {
+                    if (currentCell.value.toLowerCase().includes('vacances')) {
                         newTmpEvent.allDay = true;
                         newTmpEvent.classNames.push('holiday');
 
@@ -131,10 +132,6 @@ export default async function extractDayInfos(filePath) {
                         //set the end date to the next hour
                         tmpEvent.end.setHours(tmpEvent.end.getHours() + 1);
                     } else if (currentCell.value !== ' ') {
-
-                        //Adjust time error of server. Remove a day from the start and end date.
-                        tmpEvent.start.setDate(tmpEvent.start.getDate() - 1);
-                        tmpEvent.end.setDate(tmpEvent.end.getDate() - 1);
 
                         //save the previous event
                         events.push(tmpEvent);

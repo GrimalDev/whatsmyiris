@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="ignore workspace xml">
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="only use rate limiter in production">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/calendarController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +24,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -207,21 +216,7 @@
       <workItem from="1685983906856" duration="1196000" />
       <workItem from="1686311729356" duration="7393000" />
       <workItem from="1686324805900" duration="4871000" />
-      <workItem from="1686342197932" duration="24118000" />
-    </task>
-    <task id="LOCAL-00008" summary="logo">
-      <created>1675615126460</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1675615126460</updated>
-    </task>
-    <task id="LOCAL-00009" summary="loading screen">
-      <created>1675615158170</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1675615158170</updated>
+      <workItem from="1686342197932" duration="29662000" />
     </task>
     <task id="LOCAL-00010" summary="New styling and animations&#10;&#10;- Icon and logo&#10;- Color code&#10;- Fake loading screen">
       <created>1675680162129</created>
@@ -552,7 +547,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686490034581</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Add rate limiter on the calendar route">
+      <created>1686522294570</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1686522294570</updated>
+    </task>
+    <task id="LOCAL-00058" summary="only use rate limiter in production">
+      <created>1686522844462</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1686522844462</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +578,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
@@ -583,8 +592,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ide files" />
-    <MESSAGE value="production correction" />
     <MESSAGE value="depencie dump-die removed for production" />
     <MESSAGE value="server correction" />
     <MESSAGE value="authentication correction&#10;&#10;Auth information are now fetched from the environnement variables" />
@@ -608,6 +615,8 @@
     <MESSAGE value="Style changes for better semantic" />
     <MESSAGE value="Future route to add custom events" />
     <MESSAGE value="ignore workspace xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignore workspace xml" />
+    <MESSAGE value="Add rate limiter on the calendar route" />
+    <MESSAGE value="only use rate limiter in production" />
+    <option name="LAST_COMMIT_MESSAGE" value="only use rate limiter in production" />
   </component>
 </project>

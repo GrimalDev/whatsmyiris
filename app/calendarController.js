@@ -23,7 +23,7 @@ export default async function getCalendarJSON() {
     if (calendarJSON === null || calendarJSON === "") { return; }
 
     try {
-        fs.writeFileSync(calendarJSONPath, JSON.stringify(calendarJSON));
+        await fs.writeFileSync(calendarJSONPath, JSON.stringify(calendarJSON));
         console.log('Calendar JSON file created');
     } catch (error) {
         console.error("Error while saving JSON file: ", error);

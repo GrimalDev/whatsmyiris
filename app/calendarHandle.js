@@ -113,10 +113,6 @@ export default async function extractDayInfos(filePath) {
                         newTmpEvent.allDay = true;
                         newTmpEvent.classNames.push('holiday');
 
-                        //remove a day from the start and end date for server correction
-                        // newTmpEvent.start.setDate(newTmpEvent.start.getDate() - 1);
-                        // newTmpEvent.end.setDate(newTmpEvent.end.getDate() - 1);
-
                         //save the event
                         events.push(newTmpEvent);
                         continue;

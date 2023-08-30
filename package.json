@@ -13,6 +13,8 @@
     "@fullcalendar/interaction": "^6.1.1",
     "@fullcalendar/list": "^6.1.1",
     "@fullcalendar/timegrid": "^6.1.1",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
     "cron": "^2.3.0",
     "dotenv": "^16.0.3",
     "ejs": "~3.1.8",
@@ -24,6 +26,7 @@
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
     "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
     "node-sp-auth-config": "^3.0.5",
     "nodemon": "^2.0.4",
     "sp-download": "^2.0.0"

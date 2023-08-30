@@ -7,6 +7,7 @@ import fs from "fs";
 import { CronJob } from 'cron';
 import getCalendarJSON from './app/calendarController.js';
 import rateLimit from 'express-rate-limit';
+import cookieParser from 'cookie-parser';
 
 //dotenv config
 import dotenv from "dotenv";
@@ -15,6 +16,8 @@ dotenv.config();
 //route imports
 import homeRouter from './routes/home.js';
 import calendarRouter from './routes/calendar.js';
+import userRouter from './routes/user.js';
+import adminRouter from './routes/admin.js';
 
 const app = express();
 const listeningPort = 80
@@ -28,6 +31,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 //load balancer option for the rate limiter ip
 if (process.env.NODE_ENV === 'production') {
@@ -67,6 +71,8 @@ app.use('/', homeRouter);
 app.use('/calendar', calendarRouter);
 //return fullCalendar libraries
 app.use('/libs/fullcalendar', express.static(path.join(__dirname, 'src/libs/fullcalendar/')));
+app.use('/user', userRouter);
+app.use('/admin', adminRouter);
 
 //TODO: Oauth microsoft mediaschool
 
@@ -94,6 +100,7 @@ app.use(function (err, req, res, next) {
 
 //if the calendar.json file does not exist, create it and call the function to get the calendar
 if (!fs.existsSync(path.join(__dirname, 'src/calendar/calendar.json'))) {
+    console.log('Calendar file does not exist, creating it');
     await getCalendarJSON();
 }
 

@@ -6,6 +6,8 @@ import fs from "fs";
 import dotenv from "dotenv";
 import {teams} from "../app/calendarHandle.js";
 import getCalendarJSON from "../app/calendarController.js";
+import {getUserById} from "../app/userController.js";
+import bcrypt from "bcrypt";
 
 const router = express.Router();
 
@@ -44,12 +46,29 @@ router.get('/', async function (req, res, next) {
             const start = new Date(req.query.start);
             const end = new Date(req.query.end);
 
-            calendarReturned = calendarJSON.filter(event => {
+            calendarReturned = await calendarJSON.filter(event => {
                 const eventDate = new Date(event.start);
                 return eventDate >= start && eventDate <= end;
             });
         } else {
             calendarReturned = calendarJSON;
+        }
+
+        //TODO: filter events based on the teams in the session
+        //verify if user connected
+        if (req.cookies['uid']) {
+            //get the user
+            const user = await getUserById(req.cookies['uid']);
+
+            if (user) {
+                //if user is not admin, filter events based on the teams in the session
+                //verify password with cookie hash
+                if (user.role !== 'admin') {
+                    calendarReturned = await calendarReturned.filter(event => {
+                        return user.role.includes(event.team);
+                    });
+                }
+            }
         }
 
         res.json(calendarReturned)

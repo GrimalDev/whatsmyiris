@@ -2,7 +2,7 @@ import {Download as spDownload} from "sp-download";
 
 export default async function pullExcelData(outputPath, options = { backoff: 0 }) {
 
-    const fileUrl = 'https://iecm064-my.sharepoint.com/personal/boris_mallick_mediaschool_education/Documents/Partages/Planning%20annuel%20BTS%20SIO%202022-2023.xlsx';
+    const fileUrl = process.env.SPAUTH_SITEURL;
     let calendarDL;
 
     try {

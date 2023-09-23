@@ -16,8 +16,8 @@ dotenv.config();
 //route imports
 import homeRouter from './routes/home.js';
 import calendarRouter from './routes/calendar.js';
-import userRouter from './routes/user.js';
-import adminRouter from './routes/admin.js';
+// import userRouter from './routes/user.js';
+// import adminRouter from './routes/admin.js';
 
 const app = express();
 const listeningPort = 80
@@ -71,8 +71,8 @@ app.use('/', homeRouter);
 app.use('/calendar', calendarRouter);
 //return fullCalendar libraries
 app.use('/libs/fullcalendar', express.static(path.join(__dirname, 'src/libs/fullcalendar/')));
-app.use('/user', userRouter);
-app.use('/admin', adminRouter);
+// app.use('/user', userRouter);
+// app.use('/admin', adminRouter);
 
 //TODO: Oauth microsoft mediaschool
 

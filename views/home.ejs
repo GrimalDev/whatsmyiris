@@ -63,7 +63,6 @@
                 <img id="loading-screen__frontimage" src="/assets/images/loading-banner.png" alt="Loading banner">
             </div>
         </div>
-        <% if (role === 'admin') { %>
             <div id="choose-team">
                 <div>
                     <h1>Welcome to What's my IRIS</h1>
@@ -113,7 +112,6 @@
                     </script>
                 </div>
             </div>
-        <% } %>
     </section>
     <main class="page__container">
         <section class="page__container" id="calendar-page__container">
@@ -144,10 +142,6 @@
             <!--Calendar-->
             <div id="calendar"></div>
         </section>
-        <% if (role === 'admin') { %>
-            <a href="/admin">Gestion administrateur</a>
-        <% } %>
-        <a href="/user/logout">Deconnexion</a>
     </main>
   </body>
 </html>

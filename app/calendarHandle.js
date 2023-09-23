@@ -1,4 +1,6 @@
 import Excel from 'exceljs';
+import moment from 'moment';
+import fs from "fs";
 
 //Extract day informations out of the excel file
 //There is an Excel that defines a calendar. It is organized in blocks. One block represents a day and 5 blocks in a line separated with a column is a working week, ignoring the weekends. Form example:
@@ -36,22 +38,20 @@ export default async function extractDayInfos(filePath) {
         if (currentCell.value === null) { continue; }
         // empty protector
         try {
-            if (currentCell.value.trim() === '') { continue; }
-        } catch (error) {
-            //if current cell has a date than it is a start of the week
-            if (isDate(currentCell.value)) {
-                weeksStart.push(i-2);
-            }
-            continue;
+            if (currentCell.value.trim().length === 0) { continue; }
+        } catch (e) {
+            //replace the cell with the result of the formula
+            currentCell.value = currentCell.value.result;
         }
 
-        //if current cell has a date than it is a start of the week
-        if (isDate(currentCell.value)) {
+        // if current cell has a date than it is a start of the week
+        //check if date is in format 2023-09-11T00:00:00.000Z
+        if (moment(currentCell.value, 'YYYY-MM-DDTHH:mm:ss.SSSZ', true).isValid()) {
             weeksStart.push(i-2);
         }
     }
 
-    //TODO: Add all day events when text writtent in the middle of the day
+    //TODO: Add all day events when text writent in the middle of the day
     //TODO: Add place in the event
 
     // iterate through the weeks
@@ -61,14 +61,17 @@ export default async function extractDayInfos(filePath) {
         //loop through the days of the week
         for (let day = 0; day < 5; day++) {
             const dayStart = teamColumns[day * 3];
-            const dayDate = worksheet.getRow(weekStart + dateRow).getCell(dayStart).value;
+            const startDateCell = worksheet.getRow(weekStart + dateRow).getCell(dayStart).value
+            let startDate = moment(startDateCell, 'YYYY-MM-DDTHH:mm:ss.SSSZ', true);
+            if (!startDate.isValid()) { startDate = moment(startDateCell.result); }
+            startDate = startDate.toDate();
 
             //loop throught the hours of the teams
             for (let team = 0; team < 3; team++) {
                 const teamStart = teamColumns[day * 3 + team];
                 let tmpEvent = {
                     title: ''
-                };
+                }
 
                 //loop through the hours of the day
                 for (let hour = 0; hour < 12; hour++) {
@@ -80,16 +83,11 @@ export default async function extractDayInfos(filePath) {
                     if (currentCell.value === undefined) { continue; }
                     //if null, continue
                     if (currentCell.value === null) { continue; }
-                    //if cell doesn't contains anything else than spaces, continue
-                    // if (currentCell.value.trim() === '') { continue; }
+                    //if empty, continue
+                    if (currentCell.value.trim().length === 0) { continue; }
 
-                    //event start is the french parsed date and the hour of this cell
-                    const startDate = parseFrenchDate(dayDate);
-
-                    const eventStart = new Date(startDate.setUTCHours(dayHour))
-                    const eventEnd = new Date(startDate.setUTCHours(dayHour + 1))
-
-                    // Store cell in temporary event to see if the next is the same
+                    const eventStart = moment(startDate).add(dayHour, 'hours').toDate();
+                    const eventEnd = moment(startDate).add(dayHour + 1, 'hours').toDate();
 
                     //prepare the id of the event
                     //The id of an event is the title with parenthesis removed and all spaces replaced by dashes, the team  and the start date in timestamp format all in lowercase, with no spaces and seperated by an underscore
@@ -98,6 +96,7 @@ export default async function extractDayInfos(filePath) {
                     idEvent = idEvent.replace(/ /g, '-')
                     idEvent = idEvent.toLowerCase() + '_' + teams[team] + '_' + eventStart.getTime();
 
+                    // Store cell in temporary event to see if the next is the same
                     const newTmpEvent = {
                         id: idEvent,
                         title: currentCell.value,
@@ -106,36 +105,37 @@ export default async function extractDayInfos(filePath) {
                         team: teams[team],
                         classNames: [ `team-${teams[team]}` ],
                         allDay: false
-                    }
+                    };
 
                     //detect holidays if title contains 'vacances' and create allday event
-                    if (currentCell.value.toLowerCase().includes('vacances')) {
-                        newTmpEvent.allDay = true;
-                        newTmpEvent.classNames.push('holiday');
-
-                        //save the event
-                        events.push(newTmpEvent);
-                        continue;
-                    }
+                    // if (currentCell.value.toLowerCase().includes('vacances')) {
+                    //     newTmpEvent.allDay = true;
+                    //     newTmpEvent.classNames.push('holiday');
+                    //
+                    //     //save the event
+                    //     events.push(newTmpEvent);
+                    //     continue;
+                    // }
 
                     // If it is the same, add 1 hour to the end of the tmp event
                     // When the event is different, save the previous event and temporary store the new one and reset the temporary event
                     // If the cell is empty, save the previous event, reset the temporary event and skip this cell
-
                     if (tmpEvent.title === '') {//case of a new event
                         tmpEvent = newTmpEvent;
-                    } else if (tmpEvent.title === currentCell.value && currentCell.value !== '' && currentCell.value !== ' ') {//case of the same event
+                    } else if (tmpEvent.title === currentCell.value) {//case of the same event
                         //set the end date to the next hour
                         tmpEvent.end.setHours(tmpEvent.end.getHours() + 1);
-                    } else if (currentCell.value !== ' ') {
-
+                    } else {
                         //save the previous event
                         events.push(tmpEvent);
 
                         //set the new temp event
                         tmpEvent = newTmpEvent;
                     }
+
                 }
+                //save the last event
+                events.push(tmpEvent);
             }
         }
     }
@@ -143,28 +143,6 @@ export default async function extractDayInfos(filePath) {
     return events.filter(event => event.title.trim() !== '');
     // write the events to a JSON file
     // fs.writeFileSync('events.json', JSON.stringify(events));
-}
-
-function parseFrenchDate(dateString) {
-    const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-
-    const parts = dateString.split(' ');
-    const day = parseInt(parts[1]);
-    const month = months.indexOf(parts[2]);
-    const year = parseInt(parts[3]);
-
-    // Create a local date object
-    let date = new Date(year, month, day + 1, 0, 0, 0, 0);
-
-    // Convert it to UTC
-    date = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
-
-    return date;
-}
-
-function isDate(text) {
-    const dateRegex = /^(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\s\d{1,2}\s(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s\d{4}$/i;
-    return dateRegex.test(text);
 }
 
 String.prototype.noSpecialsFR = function() {
@@ -185,4 +163,11 @@ String.prototype.noSpecialsFR = function() {
     }
 
     return str;
+}
+
+//For tests, if parameter given then run the function
+if (process.argv[2]) {
+    const eventsObject = await extractDayInfos(process.argv[2]);
+    // write the events to a JSON file
+    fs.writeFileSync('/Users/thehiddengeek/WebstormProjects/whatsmyiris/src/calendar/calendar.json', JSON.stringify(eventsObject));
 }

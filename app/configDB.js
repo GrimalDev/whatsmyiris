@@ -12,11 +12,11 @@ const dbParams = {
     charset: 'utf8mb4'
 };
 
-const poolDB = mysql.createPool(dbParams);
-
-poolDB.getConnection((err, connection) => {
-    if (err) throw err;
-    console.log("Connected to mysql database!");
-});
-
-export default poolDB;
+// const poolDB = mysql.createPool(dbParams);
+//
+// poolDB.getConnection((err, connection) => {
+//     if (err) throw err;
+//     console.log("Connected to mysql database!");
+// });
+//
+// export default poolDB;

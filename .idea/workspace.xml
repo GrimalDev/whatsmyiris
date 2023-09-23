@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="async correction">
-      <change afterPath="$PROJECT_DIR$/app/configDB.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+    <list default="true" id="64df670a-e043-4dc7-994c-71f651839b07" name="Changes" comment="User authentication">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/calendarHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/calendarHandle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/configDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/configDB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/excelCalendarData.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/excelCalendarData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
     </list>
@@ -36,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="592eff7986ea5f0dfec3bf874de517eca0e9385d" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,10 +53,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2L6rwD6wbJBA6llqTPpE5GmKq0O" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,6 +69,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
@@ -81,6 +78,7 @@
     "WebServerToolWindowPanel.toolwindow.show.date": "false",
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "18.12.1",
     "javascript.nodejs.core.library.typings.version": "18.17.12",
@@ -90,11 +88,11 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "/Users/thehiddengeek/.nvm/versions/node/v18.12.1/bin/node",
+    "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "JavaScript.Libraries",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/thehiddengeek/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/232.8660.143/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -119,14 +117,20 @@
       <recent name="$PROJECT_DIR$/public/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="dev" />
+      <command value="calendarHandle.js" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.calendarHandle.js">
     <configuration name=" | Calendar API" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/.rest" requestIdentifier="Calendar API" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name=" | Index main route" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/.rest" index="2" requestIdentifier="Index main route" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="calendarHandle.js" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/.nvm/versions/node/v18.12.1/bin/node" nameIsGenerated="true" path-to-js-file="calendarHandle.js" working-dir="$PROJECT_DIR$/app">
+    <configuration name="calendarHandle.js" type="NodeJSConfigurationType" application-parameters="$PROJECT_DIR$/src/calendar/main-calendar.xlsx" path-to-node="node" nameIsGenerated="true" path-to-js-file="calendarHandle.js" working-dir="$PROJECT_DIR$/app">
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
@@ -135,7 +139,7 @@
       <scripts>
         <script value="start" />
       </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.12.1/bin/node" />
+      <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
@@ -147,8 +151,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request. | Calendar API" />
         <item itemvalue="HTTP Request. | Index main route" />
+        <item itemvalue="HTTP Request. | Calendar API" />
       </list>
     </recent_temporary>
   </component>
@@ -235,6 +239,12 @@
       <workItem from="1686602042137" duration="4000" />
       <workItem from="1686727621991" duration="7605000" />
       <workItem from="1693398175535" duration="2063000" />
+      <workItem from="1694636226980" duration="12000" />
+      <workItem from="1695117584026" duration="4591000" />
+      <workItem from="1695188466162" duration="944000" />
+      <workItem from="1695209967673" duration="1623000" />
+      <workItem from="1695324213226" duration="8618000" />
+      <workItem from="1695416509069" duration="3160000" />
     </task>
     <task id="LOCAL-00011" summary="Small style changes">
       <created>1676272341237</created>
@@ -636,5 +646,15 @@
     <MESSAGE value="only use rate limiter in production" />
     <MESSAGE value="async correction" />
     <option name="LAST_COMMIT_MESSAGE" value="async correction" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/calendar.js</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

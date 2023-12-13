@@ -9,7 +9,7 @@ This is a simple ```NodeJS``` **website** that provides a calendar UI.
 The goal here are the following:
   * Provide a simple, clean and intuitive UI to view a Calendar
   * Connect data to an Excel sheet stored on a sharepoint maintaned by my school.
-  * Have trust worthy data for your school calendar by connecting directly to the data-source
+  * Have trust worthy data for my school calendar by connecting directly to the data-source
 Access the website via: **[whatsmyiris.fr](whatsmyiris.fr)**
   
  ---

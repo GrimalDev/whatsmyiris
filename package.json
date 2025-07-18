@@ -25,7 +25,7 @@
     "http-errors": "^2.0.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
-    "morgan": "~1.9.1",
+    "morgan": "~1.10.1",
     "mysql": "^2.18.1",
     "node-sp-auth-config": "^3.0.5",
     "nodemon": "^2.0.4",
